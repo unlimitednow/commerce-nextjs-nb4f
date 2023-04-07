@@ -8,7 +8,7 @@ import { Head } from '@components/common'
 import { ManagedUIContext } from '@components/ui/context'
 import { builder, Builder, withChildren } from '@builder.io/react'
 
-builder.init('406d1519eec3489ab76bedcaf2910259')
+builder.init('ba26b1f01a7a45cdbbff41a67447be22')
 
 const Noop: FC<{ children?: ReactNode }> = ({ children }) => <>{children}</>
 
