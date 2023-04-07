@@ -5,6 +5,10 @@ import DefaultErrorPage from 'next/error'
 import Head from 'next/head'
 import { NextSeo } from 'next-seo'
 
+interface PageProps {
+  page: any
+}
+
 export async function getStaticProps({
   params,
 }: GetStaticPropsContext<{ page: string[] }>) {
@@ -39,9 +43,7 @@ export async function getStaticPaths() {
   }
 }
 
-export default function Page({
-  page,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function Page({ page }: PageProps) {
   const router = useRouter()
   if (router.isFallback) {
     return <h1>Loading...</h1>
@@ -83,7 +85,6 @@ export default function Page({
       </>
     )
   }
-
   return (
     <>
       <Head>
