@@ -19,10 +19,5 @@
       "pre-commit": "turbo run lint"
     }
   },
-  "packageManager": "pnpm@7.5.0",
-  "dependencies": {
-    "@builder.io/react": "^2.1.0",
-    "next-seo": "^6.0.0",
-    "@svgr/webpack": "^5.5.0"
-  }
+  "packageManager": "pnpm@7.5.0"
 }
