@@ -6,6 +6,9 @@ import { FC, ReactNode, useEffect } from 'react'
 import type { AppProps } from 'next/app'
 import { Head } from '@components/common'
 import { ManagedUIContext } from '@components/ui/context'
+import { builder, Builder, withChildren } from '@builder.io/react'
+
+builder.init('406d1519eec3489ab76bedcaf2910259')
 
 const Noop: FC<{ children?: ReactNode }> = ({ children }) => <>{children}</>
 
