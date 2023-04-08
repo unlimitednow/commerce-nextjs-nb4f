@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable jsx-a11y/alt-text */
 import { FC } from 'react'
 import Link from 'next/link'
 import s from './Navbar.module.css'
@@ -20,7 +22,7 @@ const Navbar: FC<NavbarProps> = ({ links }) => (
       <div className={s.nav}>
         <div className="flex items-center flex-1">
           <Link href="/" className={s.logo} aria-label="Logo">
-            <Logo />
+            <img src="/icon.png" />
           </Link>
           <nav className={s.navMenu}>
             <Link href="/search" className={s.link}>
