@@ -1,25 +1,24 @@
 {
-  "title": "ACME Storefront | Powered by Next.js Commerce",
-  "titleTemplate": "%s - ACME Storefront",
-  "description": "Next.js Commerce - https://www.nextjs.org/commerce",
+  "title": "NB4F Shop | Nothing B4 Family",
+  "description": "Nothing B4 Family - https://www.nb4fshop.com",
   "openGraph": {
-    "title": "ACME Storefront | Powered by Next.js Commerce",
-    "description": "Next.js Commerce - https://www.nextjs.org/commerce",
+    "title": "Nothing B4 Family | Powered by Unlimited Now",
+    "description": "Nothing B4 Family - hhttps://www.nb4fshop.com",
     "type": "website",
-    "url": "https://nextjs.org/commerce",
-    "site_name": "Next.js Commerce",
+    "url": "https://www.nb4fshop.com",
+    "site_name": "NB4F Shop",
     "images": [
       {
         "url": "/card.png",
         "width": "800",
         "height": "600",
-        "alt": "Next.js Commerce"
+        "alt": "Nothing B4 Family"
       }
     ]
   },
   "twitter": {
-    "handle": "@nextjs",
-    "site": "@nextjs",
+    "handle": "@@nb4f_distribution",
+    "site": "@nb4f_distribution",
     "cardType": "summary_large_image"
   }
 }
