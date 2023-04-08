@@ -22,7 +22,7 @@ const Navbar: FC<NavbarProps> = ({ links }) => (
       <div className={s.nav}>
         <div className="flex items-center flex-1">
           <Link href="/" className={s.logo} aria-label="Logo">
-            <img className="w-20 h-20" alt="NB4F" src="/icon.png" />
+            <img className="w-10 h-10" alt="NB4F" src="/icon.png" />
           </Link>
           <nav className={s.navMenu}>
             <Link href="/search" className={s.link}>
