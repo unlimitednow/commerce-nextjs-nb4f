@@ -10,7 +10,7 @@ const getCheckout: CheckoutEndpoint['handlers']['getCheckout'] = async ({
   const checkoutUrl = cookies.get(SWELL_CHECKOUT_URL_COOKIE)?.value
 
   if (checkoutUrl) {
-    return { redirectTo: 'https://nb4fshop.com' }
+    return { redirectTo: checkoutUrl }
   } else {
     return { redirectTo: '/cart' }
   }
