@@ -76,9 +76,7 @@ const SEO: FC<Props> = ({
    */
   return (
     <Head>
-      <title key="title">
-        {title ? `${config.titleTemplate.replace(/%s/g, title)}` : config.title}
-      </title>
+      <title key="title">NB4F Shop</title>
       <meta
         key="description"
         name="description"
