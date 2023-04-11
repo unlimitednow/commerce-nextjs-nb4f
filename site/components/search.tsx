@@ -69,18 +69,18 @@ export default function Search({ categories, brands }: SearchPropsType) {
 
   return (
     <Container>
-      <linearGradient
-        id="45de2b6b-92d5-4d68-a6a0-9b9b2abad533"
-        x1="1155.49"
-        x2="-78.208"
-        y1=".177"
-        y2="474.645"
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop stopColor="#9089FC" />
-        <stop offset={1} stopColor="#FF80B5" />
-      </linearGradient>
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 mt-3 mb-20">
+        <linearGradient
+          id="45de2b6b-92d5-4d68-a6a0-9b9b2abad533"
+          x1="1155.49"
+          x2="-78.208"
+          y1=".177"
+          y2="474.645"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#9089FC" />
+          <stop offset={1} stopColor="#FF80B5" />
+        </linearGradient>
         <div className="col-span-8 lg:col-span-2 order-1 lg:order-none">
           {/* Categories */}
           <div className="relative inline-block w-full">
