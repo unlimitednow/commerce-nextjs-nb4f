@@ -39,14 +39,14 @@ const ProductCard: FC<Props> = ({
 
   return (
     <Link
-      href={`/product/${product.slug}`}
+      href={`/products/${product.slug}`}
       className={rootClassName}
       aria-label={product.name}
     >
       {variant === 'slim' && (
         <>
           <div className={s.header}>
-        
+            <span>{product.name}</span>
           </div>
           {product?.images && (
             <Image
@@ -58,9 +58,7 @@ const ProductCard: FC<Props> = ({
               {...imgProps}
             />
           )}
-              <span>{product.name}</span>
         </>
-        
       )}
 
       {variant === 'simple' && (
