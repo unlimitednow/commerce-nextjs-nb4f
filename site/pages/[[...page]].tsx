@@ -4,6 +4,7 @@ import { BuilderComponent, Builder, builder } from '@builder.io/react'
 import DefaultErrorPage from 'next/error'
 import Head from 'next/head'
 import { NextSeo } from 'next-seo'
+import Background from '../components/shared/background'
 
 export async function getStaticProps({
   params,
@@ -57,6 +58,8 @@ export default function Page({
 
   return (
     <>
+      {' '}
+      <Background />
       <BuilderComponent model="page" content={page} />
     </>
   )
