@@ -101,9 +101,9 @@ const ProductCard: FC<Props> = ({
 
       {!variant || variant === 'slim' || variant === 'simple' ? (
         <><h3 className={s.name}>
-          <span>{product.name}</span>
-        </h3><div className={s.price}>
-          </div></>
+                   {`${price} ${product.price?.currencyCode}`}
+   <span>{product.name}</span>
+        </h3></>
       ) : null}
     </Link>
   )
