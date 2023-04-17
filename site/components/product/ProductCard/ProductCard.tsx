@@ -39,7 +39,7 @@ const ProductCard: FC<Props> = ({
 
   return (
     <Link
-      href={`/products/${product.slug}`}
+      href={`/product/${product.slug}`}
       className={rootClassName}
       aria-label={product.name}
     >
