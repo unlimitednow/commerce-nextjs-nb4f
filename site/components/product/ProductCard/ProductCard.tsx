@@ -75,7 +75,7 @@ const ProductCard: FC<Props> = ({
           {!noNameTag && (
             <div className={s.header}>
               <h3 className={s.name}>
-                <span>{product.name}</span>
+                <span></span>
               </h3>
               <div className={s.price}>
                 {`${price} ${product.price?.currencyCode}`}
