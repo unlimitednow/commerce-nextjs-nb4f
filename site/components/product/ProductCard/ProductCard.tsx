@@ -43,22 +43,24 @@ const ProductCard: FC<Props> = ({
       className={rootClassName}
       aria-label={product.name}
     >
+      <div className={s.imageContainer}>
+        {product?.images && (
+          <Image
+            alt={product.name || 'Product Image'}
+            className={s.productImage}
+            src={product.images[0]?.url || placeholderImg}
+            height={540}
+            width={540}
+            quality="85"
+            {...imgProps}
+          />
+        )}
+      </div>
+
       {variant === 'slim' && (
-        <>
-          <div className={s.header}>
-            <span>{product.name}</span>
-          </div>
-          {product?.images && (
-            <Image
-              quality="85"
-              src={product.images[0]?.url || placeholderImg}
-              alt={product.name || 'Product Image'}
-              height={320}
-              width={320}
-              {...imgProps}
-            />
-          )}
-        </>
+        <div className={s.header}>
+          <span>{product.name}</span>
+        </div>
       )}
 
       {variant === 'simple' && (
@@ -80,19 +82,6 @@ const ProductCard: FC<Props> = ({
               </div>
             </div>
           )}
-          <div className={s.imageContainer}>
-            {product?.images && (
-              <Image
-                alt={product.name || 'Product Image'}
-                className={s.productImage}
-                src={product.images[0]?.url || placeholderImg}
-                height={540}
-                width={540}
-                quality="85"
-                {...imgProps}
-              />
-            )}
-          </div>
         </>
       )}
 
@@ -109,21 +98,14 @@ const ProductCard: FC<Props> = ({
             name={product.name}
             price={`${price} ${product.price?.currencyCode}`}
           />
-          <div className={s.imageContainer}>
-            {product?.images && (
-              <Image
-                alt={product.name || 'Product Image'}
-                className={s.productImage}
-                src={product.images[0]?.url || placeholderImg}
-                height={540}
-                width={540}
-                quality="85"
-                {...imgProps}
-              />
-            )}
-          </div>
         </>
       )}
+
+      {!variant || variant === 'slim' || variant === 'simple' ? (
+        <h3 className={s.name}>
+          <span>{product.name}</span>
+        </h3>
+      ) : null}
     </Link>
   )
 }
