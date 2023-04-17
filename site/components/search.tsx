@@ -323,19 +323,7 @@ export default function Search({ categories, brands }: SearchPropsType) {
           )}
           {data ? (
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {data.products.map((product: Product) => (
-                <ProductCard
-                  variant="simple"
-                  key={product.path}
-                  className="animated fadeIn"
-                  product={product}
-                  imgProps={{
-                    width: 480,
-                    height: 480,
-                    alt: product.name,
-                  }}
-                />
-              ))}
+              
             </div>
           ) : (
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
