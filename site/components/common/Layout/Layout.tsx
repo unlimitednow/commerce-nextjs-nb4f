@@ -17,7 +17,6 @@ import { MenuSidebarView } from '@components/common/UserNav'
 import type { Page } from '@commerce/types/page'
 import type { Category } from '@commerce/types/site'
 import type { Link as LinkProps } from '../UserNav/MenuSidebarView'
-import Background from '../../../components/shared/background'
 
 const Loading = () => (
   <div className="w-80 h-80 flex items-center text-center justify-center p-3">
