@@ -120,7 +120,6 @@ const Layout: React.FC<Props> = ({
       <div className={cn(s.root)}>
         <Navbar links={navBarlinks} />
         <main className="fit">{children}</main>
-        <Background />
         <Footer pages={pageProps.pages} />
         <ModalUI />
         <CheckoutProvider>
@@ -136,6 +135,7 @@ const Layout: React.FC<Props> = ({
           }
         />
       </div>
+      <Background />
     </CommerceProvider>
   )
 }
