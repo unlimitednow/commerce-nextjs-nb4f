@@ -58,7 +58,9 @@ const ProductCard: FC<Props> = ({
               {...imgProps}
             />
           )}
+              <span>{product.name}</span>
         </>
+        
       )}
 
       {variant === 'simple' && (
