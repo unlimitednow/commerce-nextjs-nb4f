@@ -41,18 +41,16 @@ const ProductCard: FC<Props> = ({
     <Link
       href={`/product/${product.slug}`}
       className={rootClassName}
-      aria-label={product.name}
     >
       {variant === 'slim' && (
         <>
           <div className={s.header}>
-            <span>{product.name}</span>
           </div>
           {product?.images && (
             <Image
               quality="85"
               src={product.images[0]?.url || placeholderImg}
-              alt={product.name || 'Product Image'}
+              alt="test"
               height={320}
               width={320}
               {...imgProps}
