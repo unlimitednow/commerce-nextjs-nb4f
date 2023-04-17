@@ -135,7 +135,6 @@ const Layout: React.FC<Props> = ({
           }
         />
       </div>
-      <Background />
     </CommerceProvider>
   )
 }
