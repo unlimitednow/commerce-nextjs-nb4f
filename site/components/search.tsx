@@ -10,7 +10,7 @@ import type { Product } from '@commerce/types/product'
 import { Layout } from '@components/common'
 import { ProductCard } from '@components/product'
 import { Container, Skeleton } from '@components/ui'
-
+import Background from '../components/shared/background'
 import useSearch from '@framework/product/use-search'
 import rangeMap from '@lib/range-map'
 
@@ -69,6 +69,8 @@ export default function Search({ categories, brands }: SearchPropsType) {
 
   return (
     <Container>
+      <Background />
+
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 mt-3 mb-20">
         <div className="col-span-8 lg:col-span-2 order-1 lg:order-none">
           {/* Categories */}
