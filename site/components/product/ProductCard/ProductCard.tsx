@@ -44,8 +44,7 @@ const ProductCard: FC<Props> = ({
     >
       {variant === 'slim' && (
         <>
-          <div className={s.header}>
-          </div>
+         
           {product?.images && (
             <Image
               quality="85"
