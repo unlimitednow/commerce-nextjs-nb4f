@@ -7,6 +7,7 @@ import Head from 'next/head'
 import { NextSeo } from 'next-seo'
 import Background from '../components/shared/background'
 import { Navbar, Footer } from '@components/common'
+import Instagram from '../components/common/instagram'
 
 export async function getStaticProps({
   params,
@@ -64,7 +65,8 @@ export default function Page({
       <Navbar />{' '}
       <div className="z-10">
         <Background />
-        <BuilderComponent model="page" content={page} />{' '}
+        <BuilderComponent model="page" content={page} />
+        <Instagram />{' '}
       </div>
     </>
   )
