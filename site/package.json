@@ -53,6 +53,7 @@
     "react-merge-refs": "^2.0.1",
     "react-use-measure": "^2.1.1",
     "tabbable": "^5.2.1",
+    "sass": "^1.42.1",
     "tailwindcss": "^3.0.13"
   },
   "devDependencies": {
