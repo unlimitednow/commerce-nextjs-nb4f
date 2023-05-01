@@ -346,7 +346,7 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
 
         <header className="relative bg-white">
           <p className="flex h-10 items-center justify-center bg-fuchsia-900 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
-            Get free delivery on orders over $100
+           Now Available | Shop Dreika Romper Collection!
           </p>
 
           <nav
