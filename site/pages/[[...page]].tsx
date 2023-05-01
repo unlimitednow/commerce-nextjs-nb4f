@@ -61,7 +61,6 @@ export default function Page({
   return (
     <>
       {' '}
-      <Navbar />{' '}
       <div className="z-10">
         <Background />
         <BuilderComponent model="page" content={page} />{' '}
