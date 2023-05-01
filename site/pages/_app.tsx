@@ -44,10 +44,10 @@ export default function MyApp({ Component, pageProps }: AppProps) {
                 />
               </svg>
             </div>
-            <p className="text-sm leading-none text-gray-800 mt-4">
+            <p className="text-sm leading-none text-black mt-4">
               Copyright © 2023 Nothing B4 Family, Inc.
             </p>
-            <p className="text-sm leading-none text-gray-800 mt-4">
+            <p className="text-sm leading-none text-black mt-4">
               All rights reserved
             </p>
             <div className="flex items-center gap-x-4 mt-12">
