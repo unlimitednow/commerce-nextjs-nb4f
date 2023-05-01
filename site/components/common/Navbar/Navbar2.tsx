@@ -585,22 +585,7 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
           </nav>
         </header>
       </div>
-      <Container clean className="mx-auto max-w-8xl px-6">
-        <div className={s.nav}>
-          <div className="flex items-center flex-1">
-            <nav className={s.navMenu}>
-              <Link href="/search" className={s.link}>
-                All
-              </Link>
-              {links?.map((l) => (
-                <Link href={l.href} key={l.href} className={s.link}>
-                  {l.label}
-                </Link>
-              ))}
-            </nav>
-          </div>
-        </div>
-      </Container>
+      <Container clean className="mx-auto max-w-8xl px-6"></Container>
     </NavbarRoot>
   )
 }
