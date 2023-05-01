@@ -194,7 +194,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
                 leaveFrom="translate-x-0"
                 leaveTo="-translate-x-full"
               >
-                <Dialog.Panel className="fixed flex w-full max-w-xs flex-col overflow-y-auto bg-white pb-12 shadow-xl">
+                <Dialog.Panel className="absolute flex w-full max-w-xs flex-col overflow-y-auto bg-white pb-12 shadow-xl">
                   <div className="flex px-4 pb-2 pt-5">
                     <button
                       type="button"
