@@ -601,6 +601,8 @@ importers:
   site:
     specifiers:
       '@builder.io/react': ^2.1.0
+      '@headlessui/react': ^1.7.14
+      '@heroicons/react': ^2.0.12
       '@next/bundle-analyzer': ^12.0.8
       '@radix-ui/react-dropdown-menu': ^1.0.0
       '@react-spring/web': ^9.4.1
@@ -653,6 +655,8 @@ importers:
       typescript: 4.7.4
     dependencies:
       '@builder.io/react': 2.1.0_biqbaboplfbrettd7655fr4n2y
+      '@headlessui/react': 1.7.14_biqbaboplfbrettd7655fr4n2y
+      '@heroicons/react': 2.0.17_react@18.2.0
       '@radix-ui/react-dropdown-menu': 1.0.0_7ey2zzynotv32rpkwno45fsx4e
       '@react-spring/web': 9.5.4_biqbaboplfbrettd7655fr4n2y
       '@vercel/commerce': link:../packages/commerce
@@ -2298,6 +2302,26 @@ packages:
     dependencies:
       graphql: 16.6.0
     dev: true
+
+  /@headlessui/react/1.7.14_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-znzdq9PG8rkwcu9oQ2FwIy0ZFtP9Z7ycS+BAqJ3R5EIqC/0bJGvhT7193rFf+45i9nnPsYvCQVW4V/bB9Xc+gA==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: ^16 || ^17 || ^18
+      react-dom: ^16 || ^17 || ^18
+    dependencies:
+      client-only: 0.0.1
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /@heroicons/react/2.0.17_react@18.2.0:
+    resolution: {integrity: sha512-90GMZktkA53YbNzHp6asVEDevUQCMtxWH+2UK2S8OpnLEu7qckTJPhNxNQG52xIR1WFTwFqtH6bt7a60ZNcLLA==}
+    peerDependencies:
+      react: '>= 16'
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /@humanwhocodes/config-array/0.10.4:
     resolution: {integrity: sha512-mXAIHxZT3Vcpg83opl1wGlVZ9xydbfZO3r5YfRSH6Gpp2J/PfdBP0wbDa2sO6/qRbcalpoevVyW6A/fI6LfeMw==}
@@ -5748,7 +5772,7 @@ packages:
     resolution: {integrity: sha512-oWb1Z6mkHIskLzEJ/XWX0srkpkTQ7vaopMQkyaEIoq0fmtFVxOthb8cCxeT+p3ynTdkk/RZwbgG4brR5BeWECw==}
     engines: {node: '>= 4.0'}
     os: [darwin]
-    deprecated: fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2.
+    deprecated: The v1 package contains DANGEROUS / INSECURE binaries. Upgrade to safe fsevents v2
     requiresBuild: true
     dependencies:
       bindings: 1.5.0
