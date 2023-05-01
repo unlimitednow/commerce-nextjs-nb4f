@@ -10,7 +10,6 @@ import {
   SelectedOptions,
 } from '../helpers'
 import ErrorMessage from '@components/ui/ErrorMessage'
-import Badge from '../ProductSidebar/Badge.jsx'
 
 interface ProductSidebarProps {
   product: Product
@@ -85,8 +84,7 @@ const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
         )}
       </div>
       <div className="mt-6">
-        Guaranteed safe & secure checkout<br></br>
-        <Badge />{' '}
+        Guaranteed safe & secure checkout<br></br>{' '}
       </div>
     </div>
   )
