@@ -535,18 +535,6 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
                   </div>
 
                   {/* Search */}
-                  <div className="flex lg:ml-6">
-                    <a
-                      href="#"
-                      className="p-2 text-gray-400 hover:text-gray-500"
-                    >
-                      <span className="sr-only">Search</span>
-                      <MagnifyingGlassIcon
-                        className="h-6 w-6"
-                        aria-hidden="true"
-                      />
-                    </a>
-                  </div>
 
                   {/* Cart */}
                   <div className="flex items-center justify-end flex-1 space-x-8">
