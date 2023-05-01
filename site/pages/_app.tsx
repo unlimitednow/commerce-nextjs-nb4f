@@ -7,6 +7,7 @@ import type { AppProps } from 'next/app'
 import { Head } from '@components/common'
 import { ManagedUIContext } from '@components/ui/context'
 import { builder, Builder, withChildren } from '@builder.io/react'
+import { Navbar, Footer } from '@components/common'
 
 builder.init('ba26b1f01a7a45cdbbff41a67447be22')
 
@@ -22,6 +23,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head />
+      <Navbar />
       <ManagedUIContext>
         <Layout pageProps={pageProps}>
           <Component {...pageProps} />
