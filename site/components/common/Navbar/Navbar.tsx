@@ -610,7 +610,7 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
                   <div className="flex lg:ml-6">
                     <a
                       href="https://nb4fshop.com/search"
-                      className="p-2 text-gray-400 hover:text-gray-500"
+                      className="p-2 text-black hover:text-black"
                     >
                       <span className="sr-only">Search</span>
                       <MagnifyingGlassIcon
