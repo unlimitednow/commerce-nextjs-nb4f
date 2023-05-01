@@ -52,32 +52,6 @@ const UserNav: React.FC<{
             </Button>
           </li>
         )}
-        {process.env.COMMERCE_WISHLIST_ENABLED && (
-          <li className={s.item}>
-            <Link href="/wishlist">
-              <button onClick={closeSidebarIfPresent} aria-label="Wishlist">
-                <Heart />
-              </button>
-            </Link>
-          </li>
-        )}
-        {process.env.COMMERCE_CUSTOMERAUTH_ENABLED && (
-          <li className={s.item}>
-            <Dropdown>
-              <DropdownTrigger>
-                <button
-                  aria-label="Menu"
-                  className={s.avatarButton}
-                  onClick={() => (isCustomerLoggedIn ? null : openModal())}
-                >
-                  <Avatar />
-                </button>
-              </DropdownTrigger>
-              <CustomerMenuContent />
-            </Dropdown>
-          </li>
-        )}
-        <li className={s.mobileMenu}></li>
       </ul>
     </nav>
   )
