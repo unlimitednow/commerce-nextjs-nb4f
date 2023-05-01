@@ -10,7 +10,7 @@ import {
   SelectedOptions,
 } from '../helpers'
 import ErrorMessage from '@components/ui/ErrorMessage'
-import Badge from '../ProductSidebar/Badge'
+import Badge from '../ProductSidebar/Badge.jsx'
 
 interface ProductSidebarProps {
   product: Product
