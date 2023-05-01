@@ -96,16 +96,16 @@ const ProductView: FC<ProductViewProps> = ({ product, relatedProducts }) => {
               />
             )}
           </div>
-          <ProductTag
-              name={product.name}
-              price={`${price} ${product.price?.currencyCode}`}
-              fontSize={32}
-            />
+         
           <ProductSidebar
             key={product.id}
             product={product}
             className={s.sidebar}
-          />
+          /> <ProductTag
+          name={product.name}
+          price={`${price} ${product.price?.currencyCode}`}
+          fontSize={32}
+        />
         </div>
         <hr className="mt-7 border-accent-2" />
         <section className="py-12 px-6 mb-10">
