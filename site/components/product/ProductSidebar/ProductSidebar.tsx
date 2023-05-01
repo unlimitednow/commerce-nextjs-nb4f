@@ -83,7 +83,9 @@ const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
           </Button>
         )}
       </div>
-      <div className="mt-6">Guaranteed safe & secure checkout</div>
+      <div className="mt-6">
+        Guaranteed safe & secure checkout<br></br>{' '}
+      </div>
     </div>
   )
 }
