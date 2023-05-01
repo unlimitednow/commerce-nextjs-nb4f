@@ -65,8 +65,7 @@ export default function Page({
       <Navbar />{' '}
       <div className="z-10">
         <Background />
-        <BuilderComponent model="page" content={page} />
-        <Instagram />{' '}
+        <BuilderComponent model="page" content={page} />{' '}
       </div>
     </>
   )
