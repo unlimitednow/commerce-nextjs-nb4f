@@ -366,14 +366,11 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
 
                 {/* Logo */}
                 <div className="ml-4 flex lg:ml-0">
-                  <a href="#">
+                  <Link href="/" className={s.logo} aria-label="Logo">
+                    {' '}
                     <span className="sr-only">Your Company</span>
-                    <img
-                      className="h-8 w-auto"
-                      src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                      alt=""
-                    />
-                  </a>
+                    <img className="w-7 h-10" alt="NB4F" src="/icon.png" />
+                  </Link>
                 </div>
 
                 {/* Flyout menus */}
@@ -534,9 +531,6 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
       <Container clean className="mx-auto max-w-8xl px-6">
         <div className={s.nav}>
           <div className="flex items-center flex-1">
-            <Link href="/" className={s.logo} aria-label="Logo">
-              <img className="w-7 h-10" alt="NB4F" src="/icon.png" />
-            </Link>
             <nav className={s.navMenu}>
               <Link href="/search" className={s.link}>
                 All
