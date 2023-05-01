@@ -6,6 +6,7 @@ import DefaultErrorPage from 'next/error'
 import Head from 'next/head'
 import { NextSeo } from 'next-seo'
 import Background from '../components/shared/background'
+import { Navbar, Footer } from '@components/common'
 
 export async function getStaticProps({
   params,
@@ -60,6 +61,7 @@ export default function Page({
   return (
     <>
       {' '}
+      <Navbar />{' '}
       <div className="z-10">
         <Background />
         <BuilderComponent model="page" content={page} />{' '}
