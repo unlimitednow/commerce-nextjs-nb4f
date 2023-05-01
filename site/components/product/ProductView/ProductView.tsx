@@ -110,7 +110,7 @@ const ProductView: FC<ProductViewProps> = ({ product, relatedProducts }) => {
         <hr className="mt-7 border-accent-2" />
         <section className="py-12 px-6 mb-10">
           <Text variant="sectionHeading">Related Products</Text>
-          <div className={s.relatedProductsGrid}>
+          <div>
             <div className="bg-white">
               <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
                 <h2 className="sr-only">Products</h2>
