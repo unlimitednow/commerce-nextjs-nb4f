@@ -585,7 +585,6 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
           </nav>
         </header>
       </div>
-      <Container clean className="mx-auto max-w-8xl px-6"></Container>
     </NavbarRoot>
   )
 }
