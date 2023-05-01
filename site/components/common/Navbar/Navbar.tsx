@@ -534,7 +534,7 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
                   {/* Search */}
                   <div className="flex lg:ml-6">
                     <a
-                      href="#"
+                      href="https://nb4fshop.com/search"
                       className="p-2 text-gray-400 hover:text-gray-500"
                     >
                       <span className="sr-only">Search</span>
