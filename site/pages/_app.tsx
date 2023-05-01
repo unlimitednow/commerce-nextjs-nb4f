@@ -567,11 +567,13 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           </nav>
         </header>
       </div>
-      <ManagedUIContext>
-        <Layout pageProps={pageProps}>
-          <Component {...pageProps} />
-        </Layout>
-      </ManagedUIContext>
+      <div className="z-10">
+        <ManagedUIContext>
+          <Layout pageProps={pageProps}>
+            <Component {...pageProps} />
+          </Layout>
+        </ManagedUIContext>
+      </div>
     </>
   )
 }
