@@ -546,9 +546,7 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
                   </div>
 
                   {/* Cart */}
-                  <div className="flex items-center justify-end flex-1 space-x-8">
-                    <UserNav />
-                  </div>
+                  <div className="flex items-center justify-end flex-1 space-x-8"></div>
                 </div>
               </div>
             </div>
