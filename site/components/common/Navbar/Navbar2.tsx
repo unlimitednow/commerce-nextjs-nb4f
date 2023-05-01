@@ -498,6 +498,16 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
                 </Popover.Group>
 
                 <div className="ml-auto flex items-center">
+                  {process.env.COMMERCE_SEARCH_ENABLED && (
+                    <div className="justify-center flex-1 hidden lg:flex">
+                      <Searchbar />
+                    </div>
+                  )}
+                  {process.env.COMMERCE_SEARCH_ENABLED && (
+                    <div className="flex pb-4 lg:px-6 lg:hidden">
+                      <Searchbar id="mobile-search" />
+                    </div>
+                  )}
                   <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                     <a
                       href="#"
@@ -542,17 +552,7 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
               ))}
             </nav>
           </div>
-          {process.env.COMMERCE_SEARCH_ENABLED && (
-            <div className="justify-center flex-1 hidden lg:flex">
-              <Searchbar />
-            </div>
-          )}
         </div>
-        {process.env.COMMERCE_SEARCH_ENABLED && (
-          <div className="flex pb-4 lg:px-6 lg:hidden">
-            <Searchbar id="mobile-search" />
-          </div>
-        )}
       </Container>
     </NavbarRoot>
   )
