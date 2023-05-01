@@ -77,19 +77,7 @@ const UserNav: React.FC<{
             </Dropdown>
           </li>
         )}
-        <li className={s.mobileMenu}>
-          <Button
-            className={s.item}
-            aria-label="Menu"
-            variant="naked"
-            onClick={() => {
-              setSidebarView('MOBILE_MENU_VIEW')
-              openSidebar()
-            }}
-          >
-            <Menu />
-          </Button>
-        </li>
+        <li className={s.mobileMenu}></li>
       </ul>
     </nav>
   )
