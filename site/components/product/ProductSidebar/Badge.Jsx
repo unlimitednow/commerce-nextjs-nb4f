@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Badge from 'react-simple-badges'
 
-export default function MyComponent() {
+export function Badge() {
   return (
     <>
       <Badge name="node.js" style={{ width: 200 }} logoColor="#eb4034" />
