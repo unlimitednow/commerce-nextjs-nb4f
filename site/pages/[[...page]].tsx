@@ -605,8 +605,10 @@ export default function Page({
           </nav>
         </header>
       </div>
-      <Background />
-      <BuilderComponent model="page" content={page} />
+      <div className="z-10">
+        <Background />
+        <BuilderComponent model="page" content={page} />{' '}
+      </div>
     </>
   )
 }
