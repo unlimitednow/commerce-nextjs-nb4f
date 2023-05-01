@@ -16,7 +16,6 @@ import {
   ShoppingBagIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
-const [open, setOpen] = useState(false)
 
 const navigation = {
   categories: [
@@ -159,6 +158,7 @@ interface Link {
 interface NavbarProps {
   links?: Link[]
 }
+const [open, setOpen] = useState<boolean>(false)
 
 const Navbar: FC<NavbarProps> = ({ links }) => (
   <NavbarRoot>
