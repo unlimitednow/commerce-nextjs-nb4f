@@ -22,7 +22,7 @@ const products = [
     href: '#',
     price: '$48',
     imageSrc:
-      'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg',
+      'https://res.cloudinary.com/unlimitednow/image/upload/v1680770683/nb4f/french_terry_hoodie_set_latte_frylcu.png',
     imageAlt:
       'Tall slender porcelain bottle with natural clay textured body and cork stopper.',
   },
@@ -32,7 +32,7 @@ const products = [
     href: '#',
     price: '$35',
     imageSrc:
-      'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg',
+      'https://res.cloudinary.com/unlimitednow/image/upload/v1680770681/nb4f/Solid_Halter_Tie_Cut_Out_Dress_Baby_Blue_haatiu.png',
     imageAlt:
       'Olive drab green insulated bottle with flared screw lid and flat top.',
   },
@@ -42,7 +42,7 @@ const products = [
     href: '#',
     price: '$89',
     imageSrc:
-      'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg',
+      'https://res.cloudinary.com/unlimitednow/image/upload/v1671919587/nb4f/IMG_6301_magic_d4hwpb.jpg',
     imageAlt:
       'Person using a pen to cross a task off a productivity paper card.',
   },
@@ -52,7 +52,7 @@ const products = [
     href: '#',
     price: '$35',
     imageSrc:
-      'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg',
+      'https://res.cloudinary.com/unlimitednow/image/upload/v1671919495/nb4f/IMG_6294_pleg9l.png',
     imageAlt:
       'Hand holding black machined steel mechanical pencil with brass tip and top.',
   },
