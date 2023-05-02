@@ -79,7 +79,7 @@ const ProductView: FC<ProductViewProps> = ({ product, relatedProducts }) => {
                       src={image.url!}
                       alt={image.alt || 'Product Image'}
                       width={600}
-                      height={600}
+                      height={800}
                       priority={i === 0}
                       quality="85"
                     />
