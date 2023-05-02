@@ -72,23 +72,7 @@ const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
         <Rating value={4} />
         <div className="text-accent-6 pr-1 font-medium text-sm">36 reviews</div>
       </div>
-      <div>
-        {error && <ErrorMessage error={error} className="my-5" />}
-        {process.env.COMMERCE_CART_ENABLED && (
-          <Button
-            aria-label="Add to Cart"
-            type="button"
-            className={s.button}
-            onClick={addToCart}
-            loading={loading}
-            disabled={variant?.availableForSale === false}
-          >
-            {variant?.availableForSale === false
-              ? 'Not Available'
-              : 'Add To Cart'}
-          </Button>
-        )}
-      </div>
+      <div></div>
       <div className="mt-6">
         {`${price} ${product.price?.currencyCode}`}
         <br></br>
@@ -96,6 +80,21 @@ const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
         <br></br>
         Guaranteed safe & secure checkout<br></br>{' '}
       </div>
+      {error && <ErrorMessage error={error} className="my-5" />}
+      {process.env.COMMERCE_CART_ENABLED && (
+        <Button
+          aria-label="Add to Cart"
+          type="button"
+          className={s.button}
+          onClick={addToCart}
+          loading={loading}
+          disabled={variant?.availableForSale === false}
+        >
+          {variant?.availableForSale === false
+            ? 'Not Available'
+            : 'Add To Cart'}
+        </Button>
+      )}
     </div>
   )
 }
