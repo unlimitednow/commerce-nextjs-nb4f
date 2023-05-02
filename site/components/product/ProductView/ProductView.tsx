@@ -69,43 +69,47 @@ const ProductView: FC<ProductViewProps> = ({ product, relatedProducts }) => {
     <>
       <Container className="max-w-none w-full" clean>
         <div className={cn(s.root, 'fit')}>
-          <div className={cn(s.main, 'fit')}>
-           
-            <div className={s.sliderContainer}>
-              <ProductSlider key={product.id}>
-                {product.images.map((image, i) => (
-                  <div key={image.url} className={s.imageContainer}>
-                    <Image
-                      className={s.img}
-                      src={image.url!}
-                      alt={image.alt || 'Product Image'}
-                      width={600}
-                      height={600}
-                      priority={i === 0}
-                      quality="85"
-                    />
-                  </div>
-                ))}
-              </ProductSlider>
+          <div className={s.sliderContainer}>
+            <ProductSlider key={product.id}>
+              {product.images.map((image, i) => (
+                <div key={image.url} className={s.imageContainer}>
+                  <Image
+                    className={s.img}
+                    src={image.url!}
+                    alt={image.alt || 'Product Image'}
+                    width={600}
+                    height={600}
+                    priority={i === 0}
+                    quality="85"
+                  />
+                </div>
+              ))}
+            </ProductSlider>
+
+            <div className={s.productInfo}>
+              <div className={s.sidebarContainer}>
+                <ProductSidebar
+                  key={product.id}
+                  product={product}
+                  className={s.sidebar}
+                />
+              </div>
+              {process.env.COMMERCE_WISHLIST_ENABLED && (
+                <WishlistButton
+                  className={s.wishlistButton}
+                  productId={product.id}
+                  variant={product.variants[0]}
+                />
+              )}
+              <div className={s.footer}>
+                <ProductTag
+                  name={product.name}
+                  price={`${price} ${product.price?.currencyCode}`}
+                  fontSize={32}
+                />
+              </div>{' '}
             </div>
-            {process.env.COMMERCE_WISHLIST_ENABLED && (
-              <WishlistButton
-                className={s.wishlistButton}
-                productId={product.id}
-                variant={product.variants[0]}
-              />
-            )}
           </div>
-         
-          <ProductSidebar
-            key={product.id}
-            product={product}
-            className={s.sidebar}
-          /> <ProductTag
-          name={product.name}
-          price={`${price} ${product.price?.currencyCode}`}
-          fontSize={32}
-        />
         </div>
         <hr className="mt-7 border-accent-2" />
         <section className="py-12 px-6 mb-10">
