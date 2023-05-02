@@ -144,6 +144,11 @@ const navigation = {
   pages: [
     { name: 'Company', href: '#' },
     { name: 'Stores', href: '#' },
+    { name: 'Category', href: '#' },
+    { name: 'Category', href: '#' },
+    { name: 'Category', href: '#' },
+    { name: 'Category', href: '#' },
+    { name: 'Category', href: '#' },
   ],
 }
 
