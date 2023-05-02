@@ -147,8 +147,6 @@ const navigation = {
     { name: 'Category', href: '#' },
     { name: 'Category', href: '#' },
     { name: 'Category', href: '#' },
-
-    { name: 'Category', href: '#' },
   ],
 }
 
