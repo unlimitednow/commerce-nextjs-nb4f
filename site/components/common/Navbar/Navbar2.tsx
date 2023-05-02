@@ -152,7 +152,6 @@ const navigation = {
     { name: 'Category', href: '#' },
 
     { name: 'Category', href: '#' },
-
   ],
 }
 
@@ -354,8 +353,8 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
         </Transition.Root>
 
         <header className="relative bg-white">
-          <p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
-            Get free delivery on orders over $100
+          <p className="flex h-10 items-center justify-center bg-fuchsia-900 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
+            Now Available | Shop Dreika Romper Collection!
           </p>
 
           <nav
