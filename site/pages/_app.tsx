@@ -7,6 +7,7 @@ import type { AppProps } from 'next/app'
 import { Head } from '@components/common'
 import { ManagedUIContext } from '@components/ui/context'
 import { builder, Builder, withChildren } from '@builder.io/react'
+import { useTheme } from 'next-themes'
 
 builder.init('ba26b1f01a7a45cdbbff41a67447be22')
 
@@ -14,6 +15,7 @@ const Noop: FC<{ children?: ReactNode }> = ({ children }) => <>{children}</>
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const Layout = (Component as any).Layout || Noop
+  const { theme, setTheme } = useTheme()
 
   useEffect(() => {
     document.body.classList?.remove('loading')
@@ -31,6 +33,14 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 md:gap-8 gap-4">
           <div className="flex flex-col flex-shrink-0">
             <div>NB4F</div>
+            <button
+              className="mt-16 px-4 py-2 text-white dark:text-black bg-black dark:bg-white font-semibold rounded-md"
+              onClick={() => {
+                setTheme(theme === 'light' ? 'dark' : 'light')
+              }}
+            >
+              Change Theme
+            </button>
             <p className="text-sm leading-none text-black mt-4">
               Copyright © 2023 Nothing B4 Family
             </p>
