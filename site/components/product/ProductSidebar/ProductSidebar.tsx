@@ -91,6 +91,9 @@ const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
       </div>
       <div className="mt-6">
         {`${price} ${product.price?.currencyCode}`}
+        <br></br>
+        {product.name}
+        <br></br>
         Guaranteed safe & secure checkout<br></br>{' '}
       </div>
     </div>
