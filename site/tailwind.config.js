@@ -9,6 +9,7 @@ module.exports = {
       maxWidth: {
         '8xl': '1920px',
       },
+      mode: 'light', // set to light mode only
       colors: {
         primary: 'var(--primary)',
         'primary-2': 'var(--primary-2)',
