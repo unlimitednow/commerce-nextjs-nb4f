@@ -72,7 +72,7 @@ const Footer: FC<Props> = ({ className, pages }) => {
             <span>&copy; 2023 NB4F, Inc. All rights reserved.</span>
           </div>
           <div className="flex items-center text-primary text-sm">
-            <span className="text-primary">Created by</span>
+            <span className="text-primary">Join Our Mailing List</span>
             LOGO
           </div>
         </div>
