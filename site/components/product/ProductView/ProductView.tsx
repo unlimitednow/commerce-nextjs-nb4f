@@ -95,11 +95,7 @@ const ProductView: FC<ProductViewProps> = ({ product, relatedProducts }) => {
               />
             )}
           </div>
-          <ProductTag
-            name={product.name}
-            price={`${price} ${product.price?.currencyCode}`}
-            fontSize={32}
-          />
+
           <ProductSidebar
             key={product.id}
             product={product}
