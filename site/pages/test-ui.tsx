@@ -7,6 +7,7 @@ import {
   Transition,
 } from '@headlessui/react'
 import { Navbar, Footer } from '@components/common'
+import { Trash } from '@components/icons'
 
 const user = {
   name: 'Lisa Marie',
@@ -31,7 +32,7 @@ const subNavigation = [
   { name: 'Password', href: '#', icon: 'KeyIcon', current: false },
   { name: 'Notifications', href: '#', icon: 'BellIcon', current: false },
   { name: 'Plan & Billing', href: '#', icon: 'CreditCardIcon', current: true },
-  { name: 'Integrations', href: '#', icon: 'ViewGridAddIcon', current: false },
+  { name: 'Integrations', href: '#', icon: Trash, current: false },
 ]
 const plans = [
   {
