@@ -35,7 +35,7 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export function Orders() {
   return (
     <div className="bg-white">
       <div className="py-16 sm:py-24">
