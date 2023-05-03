@@ -1,69 +1,74 @@
-import * as React from "react";
-import Link from "next/link";
-import { useState, useEffect } from "react";
-import { AuthProvider, useDescope, useSession, useUser } from '@descope/react-sdk';
+import * as React from 'react'
+import Link from 'next/link'
+import { useState, useEffect } from 'react'
+import {
+  AuthProvider,
+  useDescope,
+  useSession,
+  useUser,
+} from '@descope/react-sdk'
 
-const deliveryMethod = 'sms';
+const deliveryMethod = 'sms'
 
 export default function SignUp() {
-  const [phone, setPhone] = useState("");
-  const [otpSent, setOtpSent] = useState(false);
-  const [otpCode, setOtpCode] = useState("");
+  const [phone, setPhone] = useState('')
+  const [otpSent, setOtpSent] = useState(false)
+  const [otpCode, setOtpCode] = useState('')
   const { isAuthenticated, isSessionLoading } = useSession()
   const { user, isUserLoading } = useUser()
   const sdk = useDescope()
 
   const handlePhoneChange = (event) => {
-    setPhone(event.target.value);
-  };
+    setPhone(event.target.value)
+  }
 
   const handleFormSubmit = async (event) => {
-    event.preventDefault();
+    event.preventDefault()
 
-    const resp = await sdk.otp.signUpOrIn[deliveryMethod](phone);
+    const resp = await sdk.otp.signUpOrIn[deliveryMethod](phone)
 
     if (!resp.ok) {
-      console.log('Failed to initialize signUpOrIn flow');
-      console.log(`Status Code: ${resp.code}`);
-      console.log(`Error Code: ${resp.error.errorCode}`);
-      console.log(`Error Description: ${resp.error.errorDescription}`);
-      console.log(`Error Message: ${resp.error.message}`);
+      console.log('Failed to initialize signUpOrIn flow')
+      console.log(`Status Code: ${resp.code}`)
+      console.log(`Error Code: ${resp.error.errorCode}`)
+      console.log(`Error Description: ${resp.error.errorDescription}`)
+      console.log(`Error Message: ${resp.error.message}`)
     } else {
-      console.log('Successfully initialized signUpOrIn flow');
-      setOtpSent(true);
+      console.log('Successfully initialized signUpOrIn flow')
+      setOtpSent(true)
     }
-  };
+  }
 
   const handleOtpChange = (event) => {
-    setOtpCode(event.target.value);
-  };
+    setOtpCode(event.target.value)
+  }
 
   const handleOtpSubmit = async (event) => {
-    event.preventDefault();
+    event.preventDefault()
 
-    const resp = await sdk.otp.verify.sms(phone, otpCode);
+    const resp = await sdk.otp.verify.sms(phone, otpCode)
 
     if (!resp.ok) {
-      console.log("Failed to verify OTP code");
-      console.log("Status Code: " + resp.code);
-      console.log("Error Code: " + resp.error.errorCode);
-      console.log("Error Description: " + resp.error.errorDescription);
-      console.log("Error Message: " + resp.error.message);
+      console.log('Failed to verify OTP code')
+      console.log('Status Code: ' + resp.code)
+      console.log('Error Code: ' + resp.error.errorCode)
+      console.log('Error Description: ' + resp.error.errorDescription)
+      console.log('Error Message: ' + resp.error.message)
     } else {
-      console.log("Successfully verified OTP ");
-      console.log(resp.data);
+      console.log('Successfully verified OTP ')
+      console.log(resp.data)
     }
-  };
+  }
 
   useEffect(() => {
     if (isAuthenticated && !isUserLoading) {
-      console.log("User is authenticated!");
-      console.log("User ID: " + user.id);
-      console.log("User email: " + user.email);
+      console.log('User is authenticated!')
+      console.log('User ID: ' + user.id)
+      console.log('User email: ' + user.email)
     } else {
-      console.log("User is not authenticated.");
+      console.log('User is not authenticated.')
     }
-  }, [isAuthenticated, isUserLoading]);
+  }, [isAuthenticated, isUserLoading])
 
   return (
     <div>
@@ -72,7 +77,12 @@ export default function SignUp() {
         <form onSubmit={handleFormSubmit}>
           <label>
             Phone:
-            <input type="tel" value={phone} onChange={handlePhoneChange} />
+            <input
+              required
+              type="tel"
+              value={phone}
+              onChange={handlePhoneChange}
+            />
           </label>
           <button type="submit">Send OTP</button>
         </form>
@@ -92,8 +102,5 @@ export default function SignUp() {
         </form>
       )}
     </div>
-  );
+  )
 }
-
-
-

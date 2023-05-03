@@ -25,7 +25,7 @@ export default function SignUp() {
   const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
-    const resp = await sdk.otp.signIn[deliveryMethod](email)
+    const resp = await sdk.otp.signUpOrIn[deliveryMethod](email)
 
     if (!resp.ok) {
     } else {
@@ -121,8 +121,13 @@ export default function SignUp() {
       {!isAuthenticated ? (
         <form onSubmit={handleFormSubmit}>
           <label>
-            Phone:
-            <input type="tel" value={email} onChange={handleEmailChange} />
+            Email:
+            <input
+              required
+              type="email"
+              value={email}
+              onChange={handleEmailChange}
+            />
           </label>
           <button type="submit">Send OTP</button>
         </form>
