@@ -39,6 +39,16 @@ const products2 = [
     imageAlt:
       'Hand holding black machined steel mechanical pencil with brass tip and top.',
   },
+  {
+    id: 4,
+    name: 'Machined Mechanical Pencil',
+    href: '#',
+    price: '$35',
+    imageSrc:
+      'https://res.cloudinary.com/unlimitednow/image/upload/v1671919495/nb4f/IMG_6294_pleg9l.png',
+    imageAlt:
+      'Hand holding black machined steel mechanical pencil with brass tip and top.',
+  },
   // More products...
 ]
 export default function handler(
