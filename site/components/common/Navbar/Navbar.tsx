@@ -621,7 +621,7 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
                         aria-hidden="true"
                       />
                     </a>
-                    <div class="hidden lg:block flex justify-center">
+                    <div className="hidden lg:block flex justify-center">
                       <a
                         aria-label="Favourites"
                         href="javascript:void(0)"
