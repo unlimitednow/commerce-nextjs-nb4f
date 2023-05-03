@@ -8,6 +8,9 @@ import { Head } from '@components/common'
 import { ManagedUIContext } from '@components/ui/context'
 import { builder, Builder, withChildren } from '@builder.io/react'
 import { useTheme } from 'next-themes'
+import { AuthProvider } from '@descope/react-sdk'
+
+const projectId = process.env.NEXT_PUBLIC_DESCOPE_PROJECT_ID
 
 builder.init('ba26b1f01a7a45cdbbff41a67447be22')
 
@@ -23,12 +26,16 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <Head />
-      <ManagedUIContext>
-        <Layout pageProps={pageProps}>
-          <Component {...pageProps} />
-        </Layout>
-      </ManagedUIContext>
+      <AuthProvider projectId={projectId || 'DEFAULT_PROJECT_ID'}>
+        <div>
+          <Head />
+          <ManagedUIContext>
+            <Layout pageProps={pageProps}>
+              <Component {...pageProps} />
+            </Layout>
+          </ManagedUIContext>
+        </div>
+      </AuthProvider>
     </>
   )
 }
