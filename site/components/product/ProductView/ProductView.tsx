@@ -2,7 +2,13 @@
 import cn from 'clsx'
 import Image from 'next/image'
 import s from './ProductView.module.css'
-import { FC } from 'react'
+import {
+  FC,
+  JSXElementConstructor,
+  ReactElement,
+  ReactFragment,
+  ReactPortal,
+} from 'react'
 import type { Product } from '@commerce/types/product'
 import usePrice from '@framework/product/use-price'
 import { WishlistButton } from '@components/wishlist'
@@ -11,59 +17,33 @@ import { Container, Text } from '@components/ui'
 import { SEO } from '@components/common'
 import ProductSidebar from '../ProductSidebar'
 import ProductTag from '../ProductTag'
+import { useEffect, useState } from 'react'
+
 interface ProductViewProps {
   product: Product
   relatedProducts: Product[]
 }
-const products = [
-  {
-    id: 1,
-    name: 'Earthen Bottle',
-    href: '#',
-    price: '$48',
-    imageSrc:
-      'https://res.cloudinary.com/unlimitednow/image/upload/v1680770683/nb4f/french_terry_hoodie_set_latte_frylcu.png',
-    imageAlt:
-      'Tall slender porcelain bottle with natural clay textured body and cork stopper.',
-  },
-  {
-    id: 2,
-    name: 'Nomad Tumbler',
-    href: '#',
-    price: '$35',
-    imageSrc:
-      'https://res.cloudinary.com/unlimitednow/image/upload/v1680770681/nb4f/Solid_Halter_Tie_Cut_Out_Dress_Baby_Blue_haatiu.png',
-    imageAlt:
-      'Olive drab green insulated bottle with flared screw lid and flat top.',
-  },
-  {
-    id: 3,
-    name: 'Focus Paper Refill',
-    href: '#',
-    price: '$89',
-    imageSrc:
-      'https://res.cloudinary.com/unlimitednow/image/upload/v1671919587/nb4f/IMG_6301_magic_d4hwpb.jpg',
-    imageAlt:
-      'Person using a pen to cross a task off a productivity paper card.',
-  },
-  {
-    id: 4,
-    name: 'Machined Mechanical Pencil',
-    href: '#',
-    price: '$35',
-    imageSrc:
-      'https://res.cloudinary.com/unlimitednow/image/upload/v1671919495/nb4f/IMG_6294_pleg9l.png',
-    imageAlt:
-      'Hand holding black machined steel mechanical pencil with brass tip and top.',
-  },
-  // More products...
-]
+type Products2 = {
+  id: number
+  name: string
+  href: string
+  price: string
+  imageSrc: string
+  imageAlt: string
+}
+
 const ProductView: FC<ProductViewProps> = ({ product, relatedProducts }) => {
   const { price } = usePrice({
     amount: product.price.value,
     baseAmount: product.price.retailPrice,
     currencyCode: product.price.currencyCode!,
   })
+  const [products, setProducts] = useState<Products2[]>([])
+  useEffect(() => {
+    fetch('/api/products2')
+      .then((res) => res.json())
+      .then((data) => setProducts(data))
+  }, [])
 
   return (
     <>
@@ -111,20 +91,20 @@ const ProductView: FC<ProductViewProps> = ({ product, relatedProducts }) => {
                 <h2 className="sr-only">Products</h2>
 
                 <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-                  {products.map((product) => (
-                    <a key={product.id} href={product.href} className="group">
+                  {products.map((product2) => (
+                    <a key={product2.id} href={product2.href} className="group">
                       <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
                         <img
-                          src={product.imageSrc}
-                          alt={product.imageAlt}
+                          src={product2.imageSrc}
+                          alt={product2.imageAlt}
                           className="h-full w-full object-cover object-center group-hover:opacity-75"
                         />
                       </div>
                       <h3 className="mt-4 text-sm text-gray-700">
-                        {product.name}
+                        {product2.name}
                       </h3>
                       <p className="mt-1 text-lg font-medium text-gray-900">
-                        {product.price}
+                        {product2.price}
                       </p>
                     </a>
                   ))}
