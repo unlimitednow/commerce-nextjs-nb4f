@@ -572,7 +572,7 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
                       </a>
                       <a
                         aria-label="Bag"
-                        href="javascript:void(0)"
+                        href="https://nb4fshop.com/cart"
                         className="focus:outline-none focus:ring-2 focus:ring-gray-800 hover:bg-gray-100 p-0.5 rounded"
                       >
                         <svg
@@ -617,7 +617,7 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
                         {' '}
                         <a
                           aria-label="Favourites"
-                          href="javascript:void(0)"
+                          href="https://nb4fshop.com/wishlist"
                           className="focus:outline-none focus:ring-2 focus:ring-gray-800 hover:bg-gray-100 p-0.5 rounded"
                         >
                           <svg
