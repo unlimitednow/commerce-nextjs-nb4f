@@ -67,8 +67,11 @@ const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
       <div></div>
       <div className="mt-6">
         {`${price} ${product.price?.currencyCode}`}
-        <br></br>
-        {product.name}
+        <br></br>{' '}
+        <p className="md:text-3xl text-xl font-bold leading-7 text-center text-gray-700">
+          {' '}
+          {product.name}
+        </p>
         <br></br>{' '}
       </div>{' '}
       <Text
