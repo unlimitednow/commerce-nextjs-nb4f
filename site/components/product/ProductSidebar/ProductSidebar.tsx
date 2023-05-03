@@ -66,8 +66,6 @@ const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
       />
       <div></div>
       <div className="mt-6">
-        {`${price} ${product.price?.currencyCode}`}
-        <br></br>{' '}
         <p className="md:text-3xl text-xl font-bold leading-7 text-center text-purple-800">
           {' '}
           {product.name}
@@ -79,6 +77,8 @@ const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
         html={product.descriptionHtml || product.description}
       />
       {error && <ErrorMessage error={error} className="my-5" />}
+      {`${price} ${product.price?.currencyCode}`}
+      <br></br>{' '}
       {process.env.COMMERCE_CART_ENABLED && (
         <Button
           aria-label="Add to Cart"
