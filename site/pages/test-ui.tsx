@@ -6,17 +6,6 @@ import {
   Switch,
   Transition,
 } from '@headlessui/react'
-import { QuestionMarkCircleIcon, SearchIcon } from '@heroicons/react/solid'
-import {
-  BellIcon,
-  CogIcon,
-  CreditCardIcon,
-  KeyIcon,
-  MenuIcon,
-  UserCircleIcon,
-  ViewGridAddIcon,
-  XIcon,
-} from '@heroicons/react/outline'
 
 const user = {
   name: 'Lisa Marie',
@@ -36,12 +25,12 @@ const userNavigation = [
   { name: 'Sign out', href: '#' },
 ]
 const subNavigation = [
-  { name: 'Profile', href: '#', icon: UserCircleIcon, current: false },
-  { name: 'Account', href: '#', icon: CogIcon, current: false },
-  { name: 'Password', href: '#', icon: KeyIcon, current: false },
-  { name: 'Notifications', href: '#', icon: BellIcon, current: false },
-  { name: 'Plan & Billing', href: '#', icon: CreditCardIcon, current: true },
-  { name: 'Integrations', href: '#', icon: ViewGridAddIcon, current: false },
+  { name: 'Profile', href: '#', current: false },
+  { name: 'Account', href: '#', current: false },
+  { name: 'Password', href: '#', current: false },
+  { name: 'Notifications', href: '#', icurrent: false },
+  { name: 'Plan & Billing', href: '#', current: true },
+  { name: 'Integrations', href: '#', current: false },
 ]
 const plans = [
   {
@@ -75,7 +64,7 @@ const payments = [
   // More payments...
 ]
 
-function classNames(...classes) {
+function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
@@ -85,14 +74,6 @@ export default function Example() {
 
   return (
     <>
-      {/*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full bg-gray-100">
-        <body class="h-full">
-        ```
-      */}
       <div className="h-full">
         <Disclosure as="header" className="bg-white shadow">
           {({ open }) => (
@@ -114,12 +95,7 @@ export default function Example() {
                         Search
                       </label>
                       <div className="relative">
-                        <div className="pointer-events-none absolute inset-y-0 left-0 pl-3 flex items-center">
-                          <SearchIcon
-                            className="flex-shrink-0 h-5 w-5 text-gray-400"
-                            aria-hidden="true"
-                          />
-                        </div>
+                        <div className="pointer-events-none absolute inset-y-0 left-0 pl-3 flex items-center"></div>
                         <input
                           name="search"
                           id="search"
@@ -134,14 +110,6 @@ export default function Example() {
                     {/* Mobile menu button */}
                     <Disclosure.Button className="rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-900">
                       <span className="sr-only">Open menu</span>
-                      {open ? (
-                        <XIcon className="block h-6 w-6" aria-hidden="true" />
-                      ) : (
-                        <MenuIcon
-                          className="block h-6 w-6"
-                          aria-hidden="true"
-                        />
-                      )}
                     </Disclosure.Button>
                   </div>
                   <div className="hidden lg:relative lg:z-10 lg:ml-4 lg:flex lg:items-center">
@@ -150,7 +118,6 @@ export default function Example() {
                       className="flex-shrink-0 bg-white rounded-full p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
                     >
                       <span className="sr-only">View notifications</span>
-                      <BellIcon className="h-6 w-6" aria-hidden="true" />
                     </button>
 
                     {/* Profile dropdown */}
@@ -250,7 +217,6 @@ export default function Example() {
                       className="ml-auto flex-shrink-0 bg-white rounded-full p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
                     >
                       <span className="sr-only">View notifications</span>
-                      <BellIcon className="h-6 w-6" aria-hidden="true" />
                     </button>
                   </div>
                   <div className="mt-3 px-2 space-y-1">
@@ -393,10 +359,6 @@ export default function Example() {
                             className="flex items-center text-sm font-medium text-gray-700"
                           >
                             <span>Security code</span>
-                            <QuestionMarkCircleIcon
-                              className="ml-1 flex-shrink-0 h-5 w-5 text-gray-300"
-                              aria-hidden="true"
-                            />
                           </label>
                           <input
                             type="text"
