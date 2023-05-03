@@ -611,16 +611,7 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
 
                   {/* Search */}
                   <div className="flex lg:ml-6">
-                    <a
-                      href="https://nb4fshop.com/search"
-                      className="p-2 text-black hover:text-black"
-                    >
-                      <span className="sr-only">Search</span>
-                      <MagnifyingGlassIcon
-                        className="h-6 w-6"
-                        aria-hidden="true"
-                      />
-                    </a>
+                    <></>
                     <div className="flex space-x-4 justify-center items-center md:hidden">
                       <span>
                         {' '}
@@ -684,6 +675,16 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
 
                   {/* Cart */}
                   <div className="flex items-center justify-end flex-1 space-x-8"></div>
+                  <a
+                    href="https://nb4fshop.com/search"
+                    className="p-2 text-black hover:text-black"
+                  >
+                    <span className="sr-only">Search</span>
+                    <MagnifyingGlassIcon
+                      className="h-6 w-6"
+                      aria-hidden="true"
+                    />
+                  </a>
                 </div>
               </div>
             </div>
