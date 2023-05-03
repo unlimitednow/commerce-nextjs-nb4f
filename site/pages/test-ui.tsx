@@ -25,12 +25,12 @@ const userNavigation = [
   { name: 'Sign out', href: '#' },
 ]
 const subNavigation = [
-  { name: 'Profile', href: '#', current: false },
-  { name: 'Account', href: '#', current: false },
-  { name: 'Password', href: '#', current: false },
-  { name: 'Notifications', href: '#', icurrent: false },
-  { name: 'Plan & Billing', href: '#', current: true },
-  { name: 'Integrations', href: '#', current: false },
+  { name: 'Profile', href: '#', icon: 'UserCircleIcon', current: false },
+  { name: 'Account', href: '#', icon: 'CogIcon', current: false },
+  { name: 'Password', href: '#', icon: 'KeyIcon', current: false },
+  { name: 'Notifications', href: '#', icon: 'BellIcon', current: false },
+  { name: 'Plan & Billing', href: '#', icon: 'CreditCardIcon', current: true },
+  { name: 'Integrations', href: '#', icon: 'ViewGridAddIcon', current: false },
 ]
 const plans = [
   {
@@ -253,15 +253,7 @@ export default function Example() {
                     )}
                     aria-current={item.current ? 'page' : undefined}
                   >
-                    <item.icon
-                      className={classNames(
-                        item.current
-                          ? 'text-orange-500'
-                          : 'text-gray-400 group-hover:text-gray-500',
-                        'flex-shrink-0 -ml-1 mr-3 h-6 w-6'
-                      )}
-                      aria-hidden="true"
-                    />
+                    <item.icon aria-hidden="true" />
                     <span className="truncate">{item.name}</span>
                   </a>
                 ))}
