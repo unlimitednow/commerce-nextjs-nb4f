@@ -142,11 +142,11 @@ const navigation = {
     },
   ],
   pages: [
-    { name: 'Big & Tall', href: '#' },
-    { name: 'Dresses', href: '#' },
-    { name: 'Rompers', href: '#' },
-    { name: 'Plus Size', href: '#' },
-    { name: 'Jeans', href: '#' },
+    { name: 'Big & Tall', href: 'https://nb4fshop.com/search/bt' },
+    { name: 'Dresses', href: 'https://nb4fshop.com/search/womens-dresses' },
+    { name: 'Rompers', href: 'https://nb4fshop.com/search/rompers' },
+    { name: 'Plus Size', href: 'https://nb4fshop.com/search/plus-size' },
+    { name: 'Jeans', href: 'https://nb4fshop.com/search/denim-jeans-set' },
   ],
 }
 

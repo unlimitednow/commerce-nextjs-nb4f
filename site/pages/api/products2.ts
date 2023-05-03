@@ -19,36 +19,6 @@ const products2 = [
     imageAlt:
       'Olive drab green insulated bottle with flared screw lid and flat top.',
   },
-  {
-    id: 3,
-    name: 'Focus Paper Refill',
-    href: '#',
-    price: '$89',
-    imageSrc:
-      'https://res.cloudinary.com/unlimitednow/image/upload/v1671919587/nb4f/IMG_6301_magic_d4hwpb.jpg',
-    imageAlt:
-      'Person using a pen to cross a task off a productivity paper card.',
-  },
-  {
-    id: 4,
-    name: 'Machined Mechanical Pencil',
-    href: '#',
-    price: '$35',
-    imageSrc:
-      'https://res.cloudinary.com/unlimitednow/image/upload/v1671919495/nb4f/IMG_6294_pleg9l.png',
-    imageAlt:
-      'Hand holding black machined steel mechanical pencil with brass tip and top.',
-  },
-  {
-    id: 5,
-    name: 'Machined Mechanical Pencil',
-    href: '#',
-    price: '$35',
-    imageSrc:
-      'https://res.cloudinary.com/unlimitednow/image/upload/v1671919495/nb4f/IMG_6294_pleg9l.png',
-    imageAlt:
-      'Hand holding black machined steel mechanical pencil with brass tip and top.',
-  },
   // More products...
 ]
 export default function handler(
