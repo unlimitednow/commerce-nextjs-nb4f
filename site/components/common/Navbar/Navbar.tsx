@@ -142,11 +142,11 @@ const navigation = {
     },
   ],
   pages: [
-    { name: 'Company', href: '#' },
-    { name: 'Stores', href: '#' },
-    { name: 'Category', href: '#' },
-    { name: 'Category', href: '#' },
-    { name: 'Category', href: '#' },
+    { name: 'Big & Tall', href: '#' },
+    { name: 'Dresses', href: '#' },
+    { name: 'Rompers', href: '#' },
+    { name: 'Plus Size', href: '#' },
+    { name: 'Jeans', href: '#' },
   ],
 }
 
