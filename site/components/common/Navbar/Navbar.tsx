@@ -25,7 +25,7 @@ const navigation = {
       featured: [
         {
           name: 'New Arrivals',
-          href: '#',
+          href: 'https://nb4fshop.com/search/womens',
           imageSrc:
             'https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg',
           imageAlt:
@@ -33,7 +33,7 @@ const navigation = {
         },
         {
           name: 'Basic Tees',
-          href: '#',
+          href: 'https://nb4fshop.com/search/womens',
           imageSrc:
             'https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg',
           imageAlt:
@@ -53,7 +53,7 @@ const navigation = {
             { name: 'T-Shirts', href: '#' },
             { name: 'Jackets', href: '#' },
             { name: 'Activewear', href: '#' },
-            { name: 'Browse All', href: '#' },
+            { name: 'Browse All', href: 'https://nb4fshop.com/search/womens' },
           ],
         },
         {
@@ -87,7 +87,7 @@ const navigation = {
       featured: [
         {
           name: 'New Arrivals',
-          href: '#',
+          href: 'https://nb4fshop.com/search/mens',
           imageSrc:
             'https://tailwindui.com/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg',
           imageAlt:
@@ -95,7 +95,7 @@ const navigation = {
         },
         {
           name: 'Artwork Tees',
-          href: '#',
+          href: 'https://nb4fshop.com/search/mens',
           imageSrc:
             'https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-06.jpg',
           imageAlt:
@@ -113,7 +113,7 @@ const navigation = {
             { name: 'T-Shirts', href: '#' },
             { name: 'Jackets', href: '#' },
             { name: 'Activewear', href: '#' },
-            { name: 'Browse All', href: '#' },
+            { name: 'Browse All', href: 'https://nb4fshop.com/search/mens' },
           ],
         },
         {
