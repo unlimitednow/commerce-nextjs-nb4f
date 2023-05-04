@@ -29,7 +29,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       {' '}
-      <ClerkProvider publishableKey={clerk_pub_key}>
+      <ClerkProvider frontendApi="clerk.nb4fshop.com">
         <AuthProvider projectId={projectId || 'DEFAULT_PROJECT_ID'}>
           <div>
             <Head />
@@ -39,7 +39,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
               </Layout>
             </ManagedUIContext>
           </div>
-        </AuthProvider>{' '}
+        </AuthProvider>
       </ClerkProvider>
     </>
   )
