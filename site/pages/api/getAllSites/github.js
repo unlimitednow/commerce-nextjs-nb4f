@@ -1,7 +1,7 @@
-import { requireAuth } from '@clerk/nextjs/api'
+import { withAuth } from '@clerk/nextjs/api'
 import prisma from '../../../utils/prisma'
 
-export default requireAuth(async (req, res) => {
+export default withAuth(async (req, res) => {
   const { userId } = req.auth
 
   const sites = await prisma.orders.findMany({
