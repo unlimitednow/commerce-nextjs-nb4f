@@ -1,14 +1,10 @@
-import { NextApiResponse, NextApiRequest } from 'next'
-import { ServerGetToken } from '@clerk/types'
-import prisma from '../../../utils/prisma'
+import { NextApiRequest, NextApiResponse } from 'next'
 import { requireAuth } from '@clerk/nextjs/api'
+import prisma from '../../../utils/prisma'
 
 interface ClerkRequest extends NextApiRequest {
-  session: any
-  auth: {
-    userId?: string | null
-    sessionId?: string | null
-    getToken: ServerGetToken
+  session: {
+    userId: string
   }
 }
 
