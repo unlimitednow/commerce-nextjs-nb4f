@@ -55,3 +55,4 @@ const Dashboard = () => {
     </tbody>
   )
 }
+export default Dashboard
