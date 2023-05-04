@@ -20,6 +20,7 @@ const Noop: FC<{ children?: ReactNode }> = ({ children }) => <>{children}</>
 export default function MyApp({ Component, pageProps }: AppProps) {
   const Layout = (Component as any).Layout || Noop
   const { theme, setTheme } = useTheme()
+  const clerk_pub_key = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY
 
   useEffect(() => {
     document.body.classList?.remove('loading')
@@ -28,7 +29,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       {' '}
-      <ClerkProvider frontendApi="clerk.nb4fshop.com">
+      <ClerkProvider publishableKey={clerk_pub_key}>
         <AuthProvider projectId={projectId || 'DEFAULT_PROJECT_ID'}>
           <div>
             <Head />
