@@ -3,7 +3,6 @@ import { useUser, useClerk } from '@clerk/clerk-react'
 import Link from 'next/link'
 
 import Logo from '@/public/logo.png'
-import ProfileDropdown from '../popovers/ProfileDropdown'
 
 import { Fragment, useState } from 'react'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
@@ -674,17 +673,7 @@ const DashboardNav: React.FC<{ profileDropdown?: boolean }> = ({
               </a>
             </Link>
           </div>
-          <div>
-            {profileDropdown && (
-              <ProfileDropdown
-                emailAddresses={emailAddresses}
-                profileImageUrl={profileImageUrl}
-                fullName={fullName}
-                firstName={firstName}
-                signOut={signOut}
-              />
-            )}
-          </div>
+          <div></div>
         </div>
       </div>
     </div>
