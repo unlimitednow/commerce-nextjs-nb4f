@@ -1,4 +1,4 @@
-import { ClerkProvider } from '@clerk/clerk-react'
+import { ClerkProvider } from '@clerk/nextjs'
 import { FC, ReactNode, useEffect } from 'react'
 import type { AppProps } from 'next/app'
 import { Head } from '@components/common'
@@ -25,10 +25,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <ClerkProvider
-        frontendApi="clerk.nb4fshop.com"
-        publishableKey={clerk_pub_key}
-      >
+      <ClerkProvider>
         <AuthProvider projectId={projectId || 'DEFAULT_PROJECT_ID'}>
           <div>
             <Head />
