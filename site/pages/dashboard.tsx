@@ -1,7 +1,7 @@
 import { useClerkSWR } from '../lib/fetcher'
 import { orders, wishlist } from '@prisma/client'
 import { ShowcaseWebsites } from 'types/types'
-import { ClerkProvider, useUser, SignIn, SignedOut } from '@clerk/react'
+import { useUser } from '@clerk/react'
 
 const Dashboard = () => {
   const { data: notionSites, error } = useClerkSWR<wishlist[]>(

@@ -1,7 +1,7 @@
 import '@assets/main.css'
 import '@assets/chrome-bug.css'
 import 'keen-slider/keen-slider.min.css'
-import { ClerkProvider, useUser, SignIn, SignedOut } from '@clerk/react'
+import { ClerkProvider } from '@clerk/clerk-react'
 import { FC, ReactNode, useEffect } from 'react'
 import type { AppProps } from 'next/app'
 import { Head } from '@components/common'
