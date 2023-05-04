@@ -12,7 +12,7 @@ export default requireAuth(
   async (req: ClerkRequest & NextApiRequest, res: NextApiResponse) => {
     const userId = req.session.userId
 
-    const sites = await prisma.orders.findMany({
+    const sites = await prisma.wishlist.findMany({
       where: {
         createdBy: userId,
       },
