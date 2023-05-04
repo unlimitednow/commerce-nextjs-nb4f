@@ -9,6 +9,9 @@ import { AuthProvider } from '@descope/react-sdk'
 import '@assets/main.css'
 import '@assets/chrome-bug.css'
 import 'keen-slider/keen-slider.min.css'
+import { builder } from '@builder.io/react'
+
+builder.init('ba26b1f01a7a45cdbbff41a67447be22')
 
 const projectId = process.env.NEXT_PUBLIC_DESCOPE_PROJECT_ID
 const clerk_pub_key = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY
