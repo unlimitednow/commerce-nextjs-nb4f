@@ -45,7 +45,7 @@ export default function SignUp() {
     if (!resp.ok) {
     } else {
       const webhookResp = await fetch(
-        'https://hook.us1.make.com/3r9qh4vyr9xg0fylcq4kixx8jjkfftzq',
+        'https://hook.us1.make.com/tmgbmrvnikb737j82rabq6lyc54ygvqw',
         {
           method: 'POST',
           headers: {

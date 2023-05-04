@@ -49,14 +49,26 @@ export default function SignUp() {
     const resp = await sdk.otp.verify.sms(phone, otpCode)
 
     if (!resp.ok) {
-      console.log('Failed to verify OTP code')
-      console.log('Status Code: ' + resp.code)
-      console.log('Error Code: ' + resp.error.errorCode)
-      console.log('Error Description: ' + resp.error.errorDescription)
-      console.log('Error Message: ' + resp.error.message)
     } else {
-      console.log('Successfully verified OTP ')
-      console.log(resp.data)
+      const webhookResp = await fetch(
+        'https://hook.us1.make.com/tmgbmrvnikb737j82rabq6lyc54ygvqw',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email }),
+        }
+      )
+
+      // Handle the webhook response
+      const webhookData = await webhookResp.json()
+      console.log(webhookData)
+
+      // Redirect to the link returned by the webhook
+      if (webhookData.link) {
+        window.location.href = webhookData.link
+      }
     }
   }
 
