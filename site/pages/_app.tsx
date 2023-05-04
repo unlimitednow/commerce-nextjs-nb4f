@@ -27,6 +27,7 @@ const Noop: FC<{ children?: ReactNode }> = ({ children }) => <>{children}</>
 export default function MyApp({ Component, pageProps }: AppProps) {
   const Layout = (Component as any).Layout || Noop
   const { theme, setTheme } = useTheme()
+  const router = useRouter()
 
   useEffect(() => {
     document.body.classList?.remove('loading')
@@ -34,18 +35,24 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      {' '}
       <ClerkProvider {...pageProps}>
-        <AuthProvider projectId={projectId || 'DEFAULT_PROJECT_ID'}>
-          <div>
-            <Head />
-            <ManagedUIContext>
-              <Layout pageProps={pageProps}>
-                <Component {...pageProps} />
-              </Layout>
-            </ManagedUIContext>
-          </div>
-        </AuthProvider>{' '}
+        {privatePages.includes(router.pathname) ? (
+          <Component {...pageProps} />
+        ) : (
+          <>
+            <AuthProvider projectId={projectId || 'DEFAULT_PROJECT_ID'}>
+              <div>
+                <Head />
+                <ManagedUIContext>
+                  <Layout pageProps={pageProps}>
+                    <Component {...pageProps} />
+                  </Layout>
+                </ManagedUIContext>
+              </div>
+            </AuthProvider>
+            <SignedIn /> {/* no children passed */}
+          </>
+        )}
       </ClerkProvider>
     </>
   )
