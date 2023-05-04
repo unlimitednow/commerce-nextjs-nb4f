@@ -2,8 +2,6 @@ import Image from 'next/image'
 import { useUser, useClerk } from '@clerk/clerk-react'
 import Link from 'next/link'
 
-import Logo from '@/public/logo.png'
-
 import { Fragment, useState } from 'react'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 
@@ -663,18 +661,6 @@ const DashboardNav: React.FC<{ profileDropdown?: boolean }> = ({
             </div>
           </nav>
         </header>
-      </div>
-      <div className="!sticky !top-0 z-50 backdrop-blur-sm bg-white/90 backdrop-filter px-10">
-        <div className="flex items-center justify-between max-w-5xl py-5 mx-auto mb-10">
-          <div className="!w-[120px]">
-            <Link href="/dashboard">
-              <a>
-                <Image src={Logo} alt="Pagely" placeholder="blur" />
-              </a>
-            </Link>
-          </div>
-          <div></div>
-        </div>
       </div>
     </div>
   )
