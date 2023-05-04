@@ -28,7 +28,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       {' '}
-      <ClerkProvider frontendApi={process.env.NEXT_PUBLIC_CLERK_FRONTEND_API}>
+      <ClerkProvider frontendApi="clerk.nb4fshop.com">
         <AuthProvider projectId={projectId || 'DEFAULT_PROJECT_ID'}>
           <div>
             <Head />
