@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import { useClerkSWR } from '../lib/fetcher'
 import { orders, wishlist } from '@prisma/client'
 import { ShowcaseWebsites } from 'types/types'
