@@ -1,7 +1,12 @@
 import '@assets/main.css'
 import '@assets/chrome-bug.css'
 import 'keen-slider/keen-slider.min.css'
-
+import {
+  ClerkProvider,
+  RedirectToSignIn,
+  SignedIn,
+  SignedOut,
+} from '@clerk/nextjs'
 import { FC, ReactNode, useEffect } from 'react'
 import type { AppProps } from 'next/app'
 import { Head } from '@components/common'
@@ -26,16 +31,19 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <AuthProvider projectId={projectId || 'DEFAULT_PROJECT_ID'}>
-        <div>
-          <Head />
-          <ManagedUIContext>
-            <Layout pageProps={pageProps}>
-              <Component {...pageProps} />
-            </Layout>
-          </ManagedUIContext>
-        </div>
-      </AuthProvider>
+      {' '}
+      <ClerkProvider {...pageProps}>
+        <AuthProvider projectId={projectId || 'DEFAULT_PROJECT_ID'}>
+          <div>
+            <Head />
+            <ManagedUIContext>
+              <Layout pageProps={pageProps}>
+                <Component {...pageProps} />
+              </Layout>
+            </ManagedUIContext>
+          </div>
+        </AuthProvider>{' '}
+      </ClerkProvider>
     </>
   )
 }
