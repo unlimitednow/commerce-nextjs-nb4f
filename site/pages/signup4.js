@@ -57,7 +57,7 @@ export default function SignUp() {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ email }),
+          body: JSON.stringify({ phone }),
         }
       )
 
