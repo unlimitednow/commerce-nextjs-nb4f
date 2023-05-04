@@ -1,7 +1,7 @@
 import { useClerkSWR } from '../lib/fetcher'
 import { orders, wishlist } from '@prisma/client'
 import { ShowcaseWebsites } from 'types/types'
-import { useUser } from '@clerk/react'
+import { useUser } from '@clerk/nextjs'
 
 const Dashboard = () => {
   const { data: notionSites, error } = useClerkSWR<wishlist[]>(
@@ -14,8 +14,11 @@ const Dashboard = () => {
     '/api/getShowcaseWebsites'
   )
 
-  const { user } = useUser()
+  const { isLoaded, isSignedIn, user } = useUser()
 
+  if (!isLoaded || !isSignedIn) {
+    return null
+  }
   return (
     <tbody className="bg-white divide-y divide-gray-200">
       {githubSites?.map((site) => (
