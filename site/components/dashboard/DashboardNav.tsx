@@ -144,7 +144,6 @@ function classNames(...classes: any[]) {
 const DashboardNav: React.FC<{ profileDropdown?: boolean }> = ({
   profileDropdown = true,
 }) => {
-  const { emailAddresses, profileImageUrl, fullName, firstName } = useUser()
   const { signOut } = useClerk()
   const [open, setOpen] = useState<boolean>(false)
 
