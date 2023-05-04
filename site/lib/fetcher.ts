@@ -1,16 +1,20 @@
-import useSWR from 'swr';
-import useUrlWithSession from './useUrlWithSession';
+import useSWR, { SWRConfiguration } from 'swr'
+import useUrlWithSession from './useUrlWithSession'
 
-export const useClerkSWR = <T>(url: string, fetcher = null) => {
-  if (!fetcher) {
-    fetcher = (request, options) => {
-      return fetch(request, { ...options, credentials: 'include' }).then((r) =>
-        r.json()
-      );
-    };
+type FetcherFn<T> = (url: string, options?: RequestInit) => Promise<T>
+
+export const useClerkSWR = <T>(
+  url: string,
+  fetcher?: FetcherFn<T>,
+  options?: SWRConfiguration<T>
+) => {
+  const newUrl = useUrlWithSession(url)
+
+  const defaultFetcher: FetcherFn<T> = (url, options) => {
+    return fetch(url, { ...options, credentials: 'include' }).then((r) =>
+      r.json()
+    )
   }
 
-  const newUrl = useUrlWithSession(url);
-
-  return useSWR<T>(newUrl, fetcher);
-};
+  return useSWR<T>(newUrl, fetcher || defaultFetcher, options)
+}
