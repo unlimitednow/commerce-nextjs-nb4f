@@ -29,7 +29,10 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       {' '}
-      <ClerkProvider frontendApi="clerk.nb4fshop.com">
+      <ClerkProvider
+        frontendApi="clerk.nb4fshop.com"
+        publishableKey={clerk_pub_key}
+      >
         <AuthProvider projectId={projectId || 'DEFAULT_PROJECT_ID'}>
           <div>
             <Head />
