@@ -10,8 +10,6 @@ import '@assets/main.css'
 import '@assets/chrome-bug.css'
 import 'keen-slider/keen-slider.min.css'
 
-declare module '*.css'
-
 const projectId = process.env.NEXT_PUBLIC_DESCOPE_PROJECT_ID
 const clerk_pub_key = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY
 
