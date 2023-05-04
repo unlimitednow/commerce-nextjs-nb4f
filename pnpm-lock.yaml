@@ -601,7 +601,7 @@ importers:
   site:
     specifiers:
       '@builder.io/react': ^2.1.0
-      '@clerk/clerk-react': ^2.7.0
+      '@clerk/clerk-react': ^4.15.4
       '@clerk/clerk-sdk-node': ^2.6.1
       '@clerk/nextjs': ^2.7.0
       '@clerk/types': ^1.21.0
@@ -697,7 +697,7 @@ importers:
       zod: ^3.11.4
     dependencies:
       '@builder.io/react': 2.1.0_biqbaboplfbrettd7655fr4n2y
-      '@clerk/clerk-react': 2.12.7_react@18.2.0
+      '@clerk/clerk-react': 4.15.4_react@18.2.0
       '@clerk/clerk-sdk-node': 2.10.0
       '@clerk/nextjs': 2.11.18_next@13.0.6+react@18.2.0
       '@descope/react-sdk': 1.0.3_uopgcxtfae56nwll3lnfxruym4
@@ -1470,6 +1470,19 @@ packages:
       tslib: 2.5.0
     dev: false
 
+  /@clerk/clerk-react/4.15.4_react@18.2.0:
+    resolution: {integrity: sha512-OSimB3ua3hJtlau3qUWIhIGIOoRZVEUMBuyVSkCkEEyjCGhHnSyO81Vcbv9slUtlP3DWlxeppMpdA62KZ6L1iA==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: '>=16'
+    dependencies:
+      '@clerk/shared': 0.15.7_react@18.2.0
+      '@clerk/types': 3.36.0
+      react: 18.2.0
+      swr: 1.3.0_react@18.2.0
+      tslib: 2.4.1
+    dev: false
+
   /@clerk/clerk-sdk-node/2.10.0:
     resolution: {integrity: sha512-imtaXFk6kpedHA1+rGxOvVBHP0+ee4/7bSosP0B1XJy+aiyX1ngk3a3IJsD8xeIX+U+SyLkv3Dc7bNmoV6WFeQ==}
     engines: {node: '>=12'}
@@ -1504,9 +1517,24 @@ packages:
       - supports-color
     dev: false
 
+  /@clerk/shared/0.15.7_react@18.2.0:
+    resolution: {integrity: sha512-8kinCWFF28K8N/OCqfZYIEzxpyH8+HFZ1BmfloQLDSsiy8kpUljk3qbKkBRoHAxJKohSjZL6ax+IpBzt2FmkZw==}
+    peerDependencies:
+      react: '>=16'
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /@clerk/types/1.29.3:
     resolution: {integrity: sha512-8mR25zF+USqLFJo7dAaiWwYAtuTdVy+rDPWSE529FAgp1oCpBjjzys2GpHhDBmhXAXquQ/DEi7z9ErIrvT5l8A==}
     engines: {node: '>=14'}
+
+  /@clerk/types/3.36.0:
+    resolution: {integrity: sha512-bsOIud1h3Tkvd9F0CGTqqD7NicvAF3O0hFQ2lGjuETFrNqV8houorrGM9d0ZMU72vsyzwTQ/Jw8vB4mIHIXHMQ==}
+    engines: {node: '>=14'}
+    dependencies:
+      csstype: 3.1.1
+    dev: false
 
   /@commerce-apps/core/1.6.0:
     resolution: {integrity: sha512-UpzdT6Tyu6k4a/qGBTYhL8u/M2DbfSuyEdD5PeOCUMJZ8KC/9fu7HyvyM/Tnlini9R9we4YboVcpS5egmpSaWg==}
@@ -2294,7 +2322,7 @@ packages:
       '@graphql-tools/utils': 8.12.0_graphql@16.6.0
       dataloader: 2.1.0
       graphql: 16.6.0
-      tslib: 2.4.0
+      tslib: 2.4.1
       value-or-promise: 1.0.11
     dev: true
 
@@ -11906,6 +11934,9 @@ packages:
 
   /tslib/2.4.0:
     resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==}
+
+  /tslib/2.4.1:
+    resolution: {integrity: sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==}
 
   /tslib/2.5.0:
     resolution: {integrity: sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==}
