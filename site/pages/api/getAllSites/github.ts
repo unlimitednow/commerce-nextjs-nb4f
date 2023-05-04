@@ -4,6 +4,7 @@ import prisma from '../../../utils/prisma'
 import { requireAuth } from '@clerk/nextjs/api'
 
 interface ClerkRequest extends NextApiRequest {
+  session: any
   auth: {
     userId?: string | null
     sessionId?: string | null
