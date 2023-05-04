@@ -604,7 +604,7 @@ importers:
       '@clerk/clerk-react': ^2.7.0
       '@clerk/clerk-sdk-node': ^2.6.1
       '@clerk/nextjs': ^4.11.11
-      '@clerk/types': ^1.21.0
+      '@clerk/types': ^3.36.0
       '@descope/react-sdk': ^1.0.3
       '@emotion/core': ^11.0.0
       '@emotion/react': ^11.4.1
@@ -700,6 +700,7 @@ importers:
       '@clerk/clerk-react': 2.12.7_react@18.2.0
       '@clerk/clerk-sdk-node': 2.10.0
       '@clerk/nextjs': 4.17.0_6jx7hpii6hgsrmhxgqrmo3277u
+      '@clerk/types': 3.36.0
       '@descope/react-sdk': 1.0.3_uopgcxtfae56nwll3lnfxruym4
       '@emotion/core': 11.0.0
       '@emotion/react': 11.10.8_w5j4k42lgipnm43s3brx6h3c34
@@ -769,7 +770,6 @@ importers:
       tailwindcss: 3.1.8_postcss@8.4.16
       zod: 3.19.1
     devDependencies:
-      '@clerk/types': 1.29.3
       '@hookform/devtools': 4.3.1_7ey2zzynotv32rpkwno45fsx4e
       '@next/bundle-analyzer': 12.3.0
       '@types/body-scroll-lock': 3.1.0
@@ -1559,6 +1559,7 @@ packages:
   /@clerk/types/1.29.3:
     resolution: {integrity: sha512-8mR25zF+USqLFJo7dAaiWwYAtuTdVy+rDPWSE529FAgp1oCpBjjzys2GpHhDBmhXAXquQ/DEi7z9ErIrvT5l8A==}
     engines: {node: '>=14'}
+    dev: false
 
   /@clerk/types/3.36.0:
     resolution: {integrity: sha512-bsOIud1h3Tkvd9F0CGTqqD7NicvAF3O0hFQ2lGjuETFrNqV8houorrGM9d0ZMU72vsyzwTQ/Jw8vB4mIHIXHMQ==}
