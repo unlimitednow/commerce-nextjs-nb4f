@@ -19,7 +19,7 @@ const Dashboard = () => {
         {githubSites?.map((site) => (
           <tr key={site.id}>
             <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-              <time>{site.createdAt}</time>
+              Time{' '}
             </td>
             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
               {site.siteName}
