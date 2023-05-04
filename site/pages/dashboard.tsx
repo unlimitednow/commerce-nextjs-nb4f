@@ -57,6 +57,9 @@ const Dashboard = () => {
           `}</style>
         </tbody>
       </SignedIn>
+      <SignedOut>
+        <RedirectToSignIn />
+      </SignedOut>
     </ClerkProvider>
   )
 }
