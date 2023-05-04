@@ -14,7 +14,6 @@ import { builder } from '@builder.io/react'
 builder.init('ba26b1f01a7a45cdbbff41a67447be22')
 
 const projectId = process.env.NEXT_PUBLIC_DESCOPE_PROJECT_ID
-const clerk_pub_key = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY
 
 const Noop: FC<{ children?: ReactNode }> = ({ children }) => <>{children}</>
 
