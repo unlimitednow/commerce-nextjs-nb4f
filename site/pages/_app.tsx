@@ -14,13 +14,13 @@ import { useRouter } from 'next/router'
 const projectId = process.env.NEXT_PUBLIC_DESCOPE_PROJECT_ID
 
 builder.init('ba26b1f01a7a45cdbbff41a67447be22')
+const clerk_pub_key = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY
 
 const Noop: FC<{ children?: ReactNode }> = ({ children }) => <>{children}</>
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const Layout = (Component as any).Layout || Noop
   const { theme, setTheme } = useTheme()
-  const clerk_pub_key = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY
 
   useEffect(() => {
     document.body.classList?.remove('loading')
