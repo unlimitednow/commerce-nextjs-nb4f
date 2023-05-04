@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import { useClerkSWR } from '../lib/fetcher'
 import { orders, wishlist } from '@prisma/client'
 import { ShowcaseWebsites } from 'types/types'
@@ -14,11 +15,6 @@ const Dashboard = () => {
     '/api/getShowcaseWebsites'
   )
 
-  const { isLoaded, isSignedIn, user } = useUser()
-
-  if (!isLoaded || !isSignedIn) {
-    return null
-  }
   return (
     <tbody className="bg-white divide-y divide-gray-200">
       {githubSites?.map((site) => (
