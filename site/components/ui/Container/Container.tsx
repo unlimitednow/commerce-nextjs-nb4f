@@ -21,7 +21,7 @@ const Container: FC<ContainerProps> = ({
   let Component: React.ComponentType<React.HTMLAttributes<HTMLDivElement>> =
     el as any
 
-  return <>Hello 3</>
+  return <Component className={rootClassName}>{children}</Component>
 }
 
 export default Container

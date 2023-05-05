@@ -49,7 +49,9 @@ const Skeleton: React.FC<SkeletonProps> = ({
               ...style,
             }
       }
-    ></span>
+    >
+      {children}
+    </span>
   )
 }
 

@@ -41,7 +41,7 @@ const SidebarLayout: FC<ComponentProps> = ({
 
         <UserNav />
       </header>
-      <div className={s.container}></div>
+      <div className={s.container}>{children}</div>
     </div>
   )
 }

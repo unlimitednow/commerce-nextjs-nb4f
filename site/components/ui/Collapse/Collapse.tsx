@@ -36,7 +36,7 @@ const Collapse: FC<CollapseProps> = ({ title, children }) => {
       </div>
       <a.div style={{ overflow: 'hidden', ...animProps }}>
         <div ref={ref} className={s.content}>
-          Hello2
+          {children}
         </div>
       </a.div>
     </div>

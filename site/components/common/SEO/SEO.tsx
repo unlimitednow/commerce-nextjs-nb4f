@@ -147,6 +147,7 @@ const SEO: FC<Props> = ({
         name="googlebot"
         content={robots ?? 'index,follow'}
       ></meta>
+      {children}
     </Head>
   )
 }
