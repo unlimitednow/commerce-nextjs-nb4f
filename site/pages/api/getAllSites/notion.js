@@ -1,16 +1,20 @@
-import { requireAuth } from '@clerk/nextjs/api'
-import prisma from '../../../utils/prisma'
+import { NextApiRequest, NextApiResponse } from 'next'
+import { requireSession } from '@clerk/nextjs/api'
+import prisma from '@/utils/prisma'
 
-export default requireAuth(async (req, res) => {
-  const { userId } = req.auth
+export default requireSession(
+  async (req: NextApiRequest, res: NextApiResponse) => {
+    // @ts-ignore
+    const userId = req.session.userId
 
-  const sites = await prisma.wishlist.findMany({
-    where: {
-      createdBy: userId,
-    },
-  })
+    const sites = await prisma.wishlist.findMany({
+      where: {
+        createdBy: userId,
+      },
+    })
 
-  console.log(sites)
+    console.log(sites)
 
-  res.status(200).json(sites)
-})
+    res.json(sites)
+  }
+)
