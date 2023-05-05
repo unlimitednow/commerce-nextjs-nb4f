@@ -11,7 +11,6 @@ import {
   SignedOut,
   RedirectToSignIn,
 } from '@clerk/nextjs'
-import Dash from '../components/dash'
 
 import '@assets/main.css'
 import '@assets/chrome-bug.css'
@@ -19,7 +18,6 @@ import 'keen-slider/keen-slider.min.css'
 import { builder } from '@builder.io/react'
 
 builder.init('ba26b1f01a7a45cdbbff41a67447be22')
-const privatePages = ['/dashboard']
 
 const projectId = process.env.NEXT_PUBLIC_DESCOPE_PROJECT_ID
 
@@ -32,49 +30,24 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     document.body.classList?.remove('loading')
   }, [])
-  // Get the pathname
-  const { pathname } = useRouter()
 
-  // Check if the current route matches a public page
-  const isPrivatePage = privatePages.includes(pathname)
   return (
-    <>
-      <ClerkProvider>
-        {isPrivatePage ? (
-          <>
-            <Head />
-            <SignedIn>
-              <AuthProvider projectId={projectId || 'DEFAULT_PROJECT_ID'}>
-                <div>
-                  <Head />
-                  <ManagedUIContext>
-                    <Layout pageProps={pageProps}>
-                      <Component {...pageProps} />
-                    </Layout>
-                  </ManagedUIContext>
-                </div>
-              </AuthProvider>
-            </SignedIn>
-            <SignedOut>
-              <RedirectToSignIn />
-            </SignedOut>
-          </>
-        ) : (
-          <>
-            <Head />
-            <AuthProvider projectId={projectId || 'DEFAULT_PROJECT_ID'}>
-              <div>
-                <Head />
-                <ManagedUIContext>
-                  <Layout pageProps={pageProps}>
-                    <Component {...pageProps} />
-                  </Layout>
-                </ManagedUIContext>
-              </div>
-            </AuthProvider>
-          </>
-        )}
-      </ClerkProvider>
-    </>
+    <ClerkProvider>
+      <AuthProvider projectId={projectId || 'DEFAULT_PROJECT_ID'}>
+        <div>
+          <Head />
+          <ManagedUIContext>
+            <Layout pageProps={pageProps}>
+              <SignedIn>
+                <Component {...pageProps} />
+              </SignedIn>
+              <SignedOut>
+                <RedirectToSignIn />
+              </SignedOut>
+            </Layout>
+          </ManagedUIContext>
+        </div>
+      </AuthProvider>
+    </ClerkProvider>
   )
 }
