@@ -601,7 +601,7 @@ importers:
   site:
     specifiers:
       '@builder.io/react': ^2.1.0
-      '@clerk/clerk-react': ^4.15.4
+      '@clerk/clerk-react': ^2.7.0
       '@clerk/clerk-sdk-node': ^2.6.1
       '@clerk/nextjs': ^4.11.11
       '@clerk/types': ^3.36.0
@@ -697,9 +697,9 @@ importers:
       zod: ^3.11.4
     dependencies:
       '@builder.io/react': 2.1.0_biqbaboplfbrettd7655fr4n2y
-      '@clerk/clerk-react': 4.15.4_react@18.2.0
+      '@clerk/clerk-react': 2.12.7_react@18.2.0
       '@clerk/clerk-sdk-node': 2.10.0
-      '@clerk/nextjs': 4.17.1_6jx7hpii6hgsrmhxgqrmo3277u
+      '@clerk/nextjs': 4.17.0_6jx7hpii6hgsrmhxgqrmo3277u
       '@clerk/types': 3.36.0
       '@descope/react-sdk': 1.0.3_uopgcxtfae56nwll3lnfxruym4
       '@emotion/core': 11.0.0
@@ -1472,6 +1472,17 @@ packages:
       tslib: 2.4.1
     dev: false
 
+  /@clerk/clerk-react/2.12.7_react@18.2.0:
+    resolution: {integrity: sha512-cjtTgFFYx/DGN80dvz9M4eGksVH+gIm7AT4q+BFTmXCB0MfLBQM3luxBFwKSvDbbx+Cu0g+dCtnKItdRr3iOfw==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: '>=16'
+    dependencies:
+      '@clerk/types': 1.29.3
+      react: 18.2.0
+      tslib: 2.5.0
+    dev: false
+
   /@clerk/clerk-react/4.15.4_react@18.2.0:
     resolution: {integrity: sha512-OSimB3ua3hJtlau3qUWIhIGIOoRZVEUMBuyVSkCkEEyjCGhHnSyO81Vcbv9slUtlP3DWlxeppMpdA62KZ6L1iA==}
     engines: {node: '>=14'}
@@ -1518,8 +1529,8 @@ packages:
       tslib: 2.4.1
     dev: false
 
-  /@clerk/nextjs/4.17.1_6jx7hpii6hgsrmhxgqrmo3277u:
-    resolution: {integrity: sha512-v6UPYUkwktUmZT01nJFWQvrWSyVJx6CYa/KVHo6gmSTyUFX7p7Tpfoknq1VCvqp6DCHdbJC1uHbXmjUd4AhwBQ==}
+  /@clerk/nextjs/4.17.0_6jx7hpii6hgsrmhxgqrmo3277u:
+    resolution: {integrity: sha512-uakZbhiA3Ibl2xD+hMPLMbOG/LuvIDCRsG3wjIWu2GomnMj+paGvSt/IrPkLHEVjCAhA/ivgGX5gfP5MKNOLqg==}
     engines: {node: '>=14'}
     peerDependencies:
       next: '>=10'
@@ -1543,6 +1554,11 @@ packages:
       react: '>=16'
     dependencies:
       react: 18.2.0
+    dev: false
+
+  /@clerk/types/1.29.3:
+    resolution: {integrity: sha512-8mR25zF+USqLFJo7dAaiWwYAtuTdVy+rDPWSE529FAgp1oCpBjjzys2GpHhDBmhXAXquQ/DEi7z9ErIrvT5l8A==}
+    engines: {node: '>=14'}
     dev: false
 
   /@clerk/types/3.36.0:
