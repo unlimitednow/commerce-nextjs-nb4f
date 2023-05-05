@@ -17,7 +17,7 @@ export default async function handler(
   let sites: Site[] = []
 
   if (userId) {
-    const orders = await prisma.orders.findMany({
+    const orders = await prisma.order.findMany({
       where: {
         createdBy: userId,
       },
