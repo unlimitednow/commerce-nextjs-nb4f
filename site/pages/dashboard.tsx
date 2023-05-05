@@ -1,3 +1,8 @@
+import Dash from '../components/dash'
 export default function Dashboard() {
-  return <>Hello</>
+  return (
+    <>
+      <Dash />
+    </>
+  )
 }
