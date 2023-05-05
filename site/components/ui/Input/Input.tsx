@@ -21,15 +21,7 @@ const Input: React.FC<InputProps> = (props) => {
 
   return (
     <label>
-      <input
-        className={rootClassName}
-        onChange={handleOnChange}
-        autoComplete="off"
-        autoCorrect="off"
-        autoCapitalize="off"
-        spellCheck="false"
-        {...rest}
-      />
+      <input className={rootClassName} onChange={handleOnChange} />
     </label>
   )
 }
