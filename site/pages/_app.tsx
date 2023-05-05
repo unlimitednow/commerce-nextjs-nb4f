@@ -44,7 +44,16 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           <>
             <Head />
             <SignedIn>
-              <Component {...pageProps} />
+              <AuthProvider projectId={projectId || 'DEFAULT_PROJECT_ID'}>
+                <div>
+                  <Head />
+                  <ManagedUIContext>
+                    <Layout pageProps={pageProps}>
+                      <Component {...pageProps} />
+                    </Layout>
+                  </ManagedUIContext>
+                </div>
+              </AuthProvider>
             </SignedIn>
             <SignedOut>
               <RedirectToSignIn />
@@ -53,8 +62,16 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         ) : (
           <>
             <Head />
-
-            <Component {...pageProps} />
+            <AuthProvider projectId={projectId || 'DEFAULT_PROJECT_ID'}>
+              <div>
+                <Head />
+                <ManagedUIContext>
+                  <Layout pageProps={pageProps}>
+                    <Component {...pageProps} />
+                  </Layout>
+                </ManagedUIContext>
+              </div>
+            </AuthProvider>
           </>
         )}
       </ClerkProvider>
