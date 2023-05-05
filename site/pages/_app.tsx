@@ -39,26 +39,22 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   const isPrivatePage = privatePages.includes(pathname)
   return (
     <>
-      <ClerkProvider {...pageProps}>
+      <ClerkProvider>
         {isPrivatePage ? (
-          <Component {...pageProps} />
+          <>
+            <Head />
+            <SignedIn>
+              <Component {...pageProps} />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
         ) : (
           <>
-            <SignedOut>
-              <AuthProvider projectId={projectId || 'DEFAULT_PROJECT_ID'}>
-                <div>
-                  <Head />
-                  <ManagedUIContext>
-                    <Layout pageProps={pageProps}>
-                      <Component {...pageProps} />
-                    </Layout>
-                  </ManagedUIContext>
-                </div>
-              </AuthProvider>
-            </SignedOut>
-            <SignedIn>
-              <Dash />
-            </SignedIn>
+            <Head />
+
+            <Component {...pageProps} />
           </>
         )}
       </ClerkProvider>
