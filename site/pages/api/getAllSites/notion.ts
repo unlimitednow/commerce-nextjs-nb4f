@@ -1,18 +1,9 @@
-import { requireAuth } from '@clerk/nextjs/api'
+import { getAuth } from "@clerk/nextjs/server";
 import prisma from '../../../utils/prisma'
+import type { NextApiRequest, NextApiResponse } from 'next'
 
-export default requireAuth(
-  async (
-    req: { auth: { userId: any } },
-    res: {
-      status: (arg0: number) => {
-        (): any
-        new (): any
-        json: { (arg0: any): void; new (): any }
-      }
-    }
-  ) => {
-    const { userId } = req.auth
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { userId } = getAuth(req);
 
     const sites = await prisma.wishlist.findMany({
       where: {
