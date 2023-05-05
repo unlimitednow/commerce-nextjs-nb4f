@@ -8,11 +8,16 @@ export default async function handler(
 ) {
   const { userId } = getAuth(req)
 
-  const sites = await prisma.wishlist.findMany({
-    where: {
-      createdBy: userId,
-    },
-  })
+  let sites
+  if (userId) {
+    sites = await prisma.wishlist.findMany({
+      where: {
+        createdBy: userId,
+      },
+    })
+  } else {
+    sites = []
+  }
 
   console.log(sites)
 
