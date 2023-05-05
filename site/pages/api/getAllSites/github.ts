@@ -17,16 +17,16 @@ export default async function handler(
   let sites: Site[] = []
 
   if (userId) {
-    const orders = await prisma.order.findMany({
+    const orders = await prisma.orders.findMany({
       where: {
         createdBy: userId,
       },
     })
 
-    sites = orders.map((order: { id: any; name: any; url: any }) => ({
+    sites = orders.map((order: { id: any; siteName: any; subdomain: any }) => ({
       id: order.id,
-      name: order.name,
-      url: order.url,
+      name: order.siteName,
+      url: order.subdomain,
     }))
   }
 

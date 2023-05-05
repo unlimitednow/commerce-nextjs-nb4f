@@ -17,17 +17,19 @@ export default async function handler(
   let sites: Site[] = []
 
   if (userId) {
-    const wishlist = await prisma.wishlist.findMany({
+    const wishlists = await prisma.wishlist.findMany({
       where: {
         createdBy: userId,
       },
     })
 
-    sites = wishlist.map((wishlist: { id: any; name: any; url: any }) => ({
-      id: wishlist.id,
-      name: wishlist.name,
-      url: wishlist.url,
-    }))
+    sites = wishlists.map(
+      (wishlist: { id: any; siteName: any; subdomain: any }) => ({
+        id: wishlist.id,
+        name: wishlist.siteName,
+        url: wishlist.subdomain,
+      })
+    )
   }
 
   console.log(sites)
