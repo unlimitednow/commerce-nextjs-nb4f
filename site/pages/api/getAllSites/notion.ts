@@ -3,8 +3,6 @@ import prisma from '../../../utils/prisma'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 type Site = {
-  // define the structure of the Site object here
-  // for example:
   id: number
   name: string
   url: string
@@ -16,14 +14,20 @@ export default async function handler(
 ) {
   const { userId } = getAuth(req)
 
-  let sites: Site[] = [] // add a type annotation to the sites variable
+  let sites: Site[] = []
 
   if (userId) {
-    sites = await prisma.wishlist.findMany({
+    const wishlist = await prisma.wishlist.findMany({
       where: {
         createdBy: userId,
       },
     })
+
+    sites = wishlist.map((wishlist: { id: any; name: any; url: any }) => ({
+      id: wishlist.id,
+      name: wishlist.name,
+      url: wishlist.url,
+    }))
   }
 
   console.log(sites)
